@@ -5,14 +5,18 @@ using Random = UnityEngine.Random;
 
 public enum PipeType
 {
-    Genearl,
-    Obstrecle
+    General,
+    Obstecle
 }
 
 public class PipeCreator : MonoBehaviour
-{   
+{
+    public float pipeSpeed;
+    
     public List<GameObject> generalPipe;
-    public List<GameObject> obsteclePipe;
+    public List<GameObject> obstreclePipe;
+
+    public Transform pipeHolder;
 
     public Transform createLocation;
 
@@ -21,22 +25,26 @@ public class PipeCreator : MonoBehaviour
     private List<GameObject> _bufferListOfPipes;
 
     private bool _createPipe;
+    private float _pipeCreationTimer;
     
     void Start()
     {
         _bufferListOfPipes = new List<GameObject>();
         _currentGeneralPipeIndex = 0;
         _createPipe = true;
+        _pipeCreationTimer = 1 / pipeSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (_createPipe)
+        if (_pipeCreationTimer >= 1 / pipeSpeed)
         {
-            CreatePipe(PipeType.Genearl);
+            CreatePipe(PipeType.General);
             _createPipe = false;
+            _pipeCreationTimer = 0;
         }
+
+        _pipeCreationTimer += Time.deltaTime;
     }
 
     public void CreatePipe(PipeType type)
@@ -45,17 +53,19 @@ public class PipeCreator : MonoBehaviour
         GameObject tempPipe;
         switch (type)
         {
-            case PipeType.Genearl:
-                while (rand != _currentGeneralPipeIndex)
+            case PipeType.General:
+                while (rand == _currentGeneralPipeIndex)
                 {
                     rand = Random.Range(0, generalPipe.Count);
                 }
 
-                tempPipe = Instantiate(generalPipe[rand], createLocation);
+                _currentGeneralPipeIndex = rand;
+                
+                tempPipe = Instantiate(generalPipe[rand], createLocation.position, createLocation.rotation, pipeHolder);
                 break;
-            case PipeType.Obstrecle:
-                rand = Random.Range(0, obsteclePipe.Count);
-                tempPipe = Instantiate(obsteclePipe[rand], createLocation);
+            case PipeType.Obstecle:
+                rand = Random.Range(0, obstreclePipe.Count);
+                tempPipe = Instantiate(obstreclePipe[rand], createLocation.position, createLocation.rotation, pipeHolder);
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
