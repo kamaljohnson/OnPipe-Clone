@@ -211,6 +211,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &731242668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731242669}
+  m_Layer: 0
+  m_Name: PipeCreationSensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &731242669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731242668}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 15.43, z: 4.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,9 +333,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1304159129}
+  - component: {fileID: 1304159130}
   - component: {fileID: 1304159128}
   m_Layer: 0
-  m_Name: PipeCreator
+  m_Name: Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5672e40d7d0ed4b92fd01b76fa96e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeSpeed: 1
   generalPipe:
   - {fileID: 2830825470109335307, guid: 73c891b525b138a46baa2ccf2da41ff6, type: 3}
   - {fileID: 4778509109888122908, guid: ab84ef2fd7328c347b4a93690e7af6d9, type: 3}
@@ -331,8 +361,13 @@ MonoBehaviour:
   - {fileID: 924162778785830053, guid: 4c265e617a3aca249928d24d7ab43ae3, type: 3}
   obstreclePipe:
   - {fileID: 6741710610501395480, guid: 3a38cd2c003f46a44bfd273eb3507a93, type: 3}
-  pipeHolder: {fileID: 2031255507}
+  pipeCreationSensor: {fileID: 731242669}
   createLocation: {fileID: 1429317150}
+  pipeSizes:
+  - 1
+  - 1.5
+  - 2
+  - 2.5
 --- !u!4 &1304159129
 Transform:
   m_ObjectHideFlags: 0
@@ -347,6 +382,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304159130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304159127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430ef1d7df8b8be48a08d3bf40cfac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipeSpeed: 2
+  pipeHolder: {fileID: 2031255507}
 --- !u!1 &1429317149
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,12 +420,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429317149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000000059604645, y: 15.43, z: 0.16999987}
+  m_LocalPosition: {x: 0, y: 15.43, z: 0.16999987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691607732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1691607733}
+  m_Layer: 0
+  m_Name: PipeDeletionSensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1691607733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691607732}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 15.43, z: 4.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &2031255506
 GameObject:
   m_ObjectHideFlags: 0
