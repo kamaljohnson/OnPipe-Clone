@@ -14,7 +14,7 @@ public class PipeCreator : MonoBehaviour
 {
     private float _pipeSpeed;
     
-    public List<GameObject> generalPipe;
+    public GameObject generalPipe;
     public List<GameObject> obstreclePipe;
 
     private Transform pipeHolder;
@@ -30,6 +30,7 @@ public class PipeCreator : MonoBehaviour
     private bool _createPipe;
 
     public List<float> pipeSizes = new List<float>();
+    public List<float> pipeWidths = new List<float>(); 
 
     void Start()
     {
@@ -91,13 +92,17 @@ public class PipeCreator : MonoBehaviour
             case PipeType.General:
                 while (rand == _currentGeneralPipeIndex)
                 {
-                    rand = Random.Range(0, generalPipe.Count);
+                    rand = Random.Range(0, pipeWidths.Count);
                 }
 
                 _currentGeneralPipeIndex = rand;
                 
-                tempPipe = Instantiate(generalPipe[rand], createLocation.position, createLocation.rotation, pipeHolder);
-                tempPipe.transform.localScale += new Vector3(0, pipeSizes[Random.Range(0, pipeSizes.Count)], 0);
+                tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
+                tempPipe.transform.localScale += new Vector3(
+                        pipeWidths[rand],
+                        pipeSizes[Random.Range(0, pipeSizes.Count)], 
+                        pipeWidths[rand]
+                        );
                 break;
             case PipeType.Obstecle:
                 rand = Random.Range(0, obstreclePipe.Count);

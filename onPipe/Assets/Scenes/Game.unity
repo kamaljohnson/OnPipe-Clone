@@ -148,7 +148,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -293,7 +293,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -317,13 +317,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.08771148, y: -0, z: -0, w: 0.99614596}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -10.064, y: 0, z: 0}
 --- !u!1 &1304159127
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,20 +354,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5672e40d7d0ed4b92fd01b76fa96e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generalPipe:
-  - {fileID: 2830825470109335307, guid: 73c891b525b138a46baa2ccf2da41ff6, type: 3}
-  - {fileID: 4778509109888122908, guid: ab84ef2fd7328c347b4a93690e7af6d9, type: 3}
-  - {fileID: 924162778785830053, guid: fa3c0196dc275104d8fbd37e57d3dcb5, type: 3}
-  - {fileID: 924162778785830053, guid: 4c265e617a3aca249928d24d7ab43ae3, type: 3}
+  generalPipe: {fileID: 924162778785830053, guid: fa3c0196dc275104d8fbd37e57d3dcb5,
+    type: 3}
   obstreclePipe:
   - {fileID: 6741710610501395480, guid: 3a38cd2c003f46a44bfd273eb3507a93, type: 3}
   pipeCreationSensor: {fileID: 731242669}
+  pipeDeletionSensor: {fileID: 1691607733}
   createLocation: {fileID: 1429317150}
   pipeSizes:
   - 1
-  - 1.5
   - 2
   - 2.5
+  - 3
+  pipeWidths:
+  - 0.7
+  - 1
+  - 1.2
+  - 1.5
 --- !u!4 &1304159129
 Transform:
   m_ObjectHideFlags: 0
@@ -419,7 +422,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429317149}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 15.43, z: 0.16999987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -450,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691607732}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 15.43, z: 4.17}
+  m_LocalPosition: {x: 0, y: -40.11, z: 4.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
