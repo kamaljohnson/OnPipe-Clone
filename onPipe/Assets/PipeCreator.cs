@@ -10,6 +10,13 @@ public enum PipeType
     Obstecle
 }
 
+public enum GameStatus
+{
+    Playing,
+    AtMenu,
+    GameOver
+}
+
 public class PipeCreator : MonoBehaviour
 {
     private float _pipeSpeed;
@@ -30,7 +37,9 @@ public class PipeCreator : MonoBehaviour
     private bool _createPipe;
 
     public List<float> pipeSizes = new List<float>();
-    public List<float> pipeWidths = new List<float>(); 
+    public List<float> pipeWidths = new List<float>();
+
+    public GameObject ring;
 
     void Start()
     {
