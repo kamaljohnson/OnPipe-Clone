@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +41,7 @@ public class Ring : MonoBehaviour
 
     public void Contract()
     {
-        if (checkIfRingFits())
+        if (checkRingContractable())
         {
             Debug.Log("contracting");
             ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, new Vector3(0, 0, ring.transform.localScale.z), ringExpandSpeed * Time.deltaTime);
@@ -55,11 +56,10 @@ public class Ring : MonoBehaviour
         }
     }
 
-    public bool checkIfRingFits()
+    public bool checkRingContractable()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(ringContractionSensor1.position, ringContractionSensor1.forward, out hit, 0) || 
-            Physics.Raycast(ringContractionSensor2.position, ringContractionSensor2.forward, out hit, 0))
+        if (Physics.Raycast(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward,
+            fitOffsetLimit))
         {
             return false;
         }

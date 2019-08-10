@@ -120,36 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &505668377
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 505668378}
-  m_Layer: 0
-  m_Name: ringContractionSensor 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &505668378
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505668377}
-  m_LocalRotation: {x: -0.000000059604645, y: -0.7071067, z: -0.000000059604645, w: 0.7071068}
-  m_LocalPosition: {x: 0.715, y: 0, z: 0.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5006512735356646642}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430ef1d7df8b8be48a08d3bf40cfac1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeSpeed: 2
+  pipeSpeed: 3
   pipeHolder: {fileID: 2031255507}
 --- !u!1 &1429317149
 GameObject:
@@ -460,36 +430,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1538914862
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1538914863}
-  m_Layer: 0
-  m_Name: ringContractionSensor 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1538914863
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1538914862}
-  m_LocalRotation: {x: -0.000000059604645, y: -0.7071067, z: -0.000000059604645, w: 0.7071068}
-  m_LocalPosition: {x: 0.715, y: 0, z: 0.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5006512735356646642}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &1691607732
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +460,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!1 &1701016645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1701016646}
+  m_Layer: 0
+  m_Name: raycastSensor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1701016646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701016645}
+  m_LocalRotation: {x: 0.000000029802322, y: -0.7071067, z: -0.000000059604645, w: 0.7071068}
+  m_LocalPosition: {x: 0.705, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5006512735356646642}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &2031255506
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,11 +608,21 @@ PrefabInstance:
         type: 3}
       propertyPath: ringContractionSensor
       value: 
-      objectReference: {fileID: 505668378}
+      objectReference: {fileID: 0}
     - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
         type: 3}
       propertyPath: fitOffsetLimit
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: ringContractionSensor1
+      value: 
+      objectReference: {fileID: 1701016646}
+    - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: ringContractionSensor2
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}
