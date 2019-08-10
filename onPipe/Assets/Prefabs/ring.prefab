@@ -109,3 +109,5 @@ MonoBehaviour:
   maxRingSize: 3
   ringExpandSpeed: 10
   ringContractSpeed: 10
+  ringContractionSensor1: {fileID: 0}
+  fitOffsetLimit: 0

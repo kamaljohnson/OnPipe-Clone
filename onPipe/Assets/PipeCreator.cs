@@ -4,12 +4,6 @@ using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public enum PipeType
-{
-    General,
-    Obstecle
-}
-
 public enum GameStatus
 {
     Playing,
@@ -20,6 +14,8 @@ public enum GameStatus
 public class PipeCreator : MonoBehaviour
 {
     private float _pipeSpeed;
+    public float obstrecleCreationDelay;
+    private float _obstrecleCreationTimer;
     
     public GameObject generalPipe;
     public List<GameObject> obstreclePipe;
@@ -31,8 +27,6 @@ public class PipeCreator : MonoBehaviour
     public Transform createLocation;
 
     private int _currentGeneralPipeIndex;
-
-    private List<GameObject> _bufferListOfPipes;
 
     private bool _createPipe;
 
@@ -46,22 +40,29 @@ public class PipeCreator : MonoBehaviour
         _pipeSpeed = gameObject.GetComponent<Game>().pipeSpeed;
         pipeHolder = gameObject.GetComponent<Game>().pipeHolder;
         
-        _bufferListOfPipes = new List<GameObject>();
         _currentGeneralPipeIndex = 0;
         _createPipe = true;
     }
 
     void Update()
     {
-
+        
         if (checkPipeCreationSensor())
         {
             _createPipe = true;
         }
+        else
+        {
+            _obstrecleCreationTimer += Time.deltaTime;
+            if (_obstrecleCreationTimer > obstrecleCreationDelay)
+            {
+                CreateObstrecle();
+            }
+        }
         
         if (_createPipe)
         {
-            CreatePipe(PipeType.General);
+            CreatePipe();
             _createPipe = false;
         }
         
@@ -92,34 +93,27 @@ public class PipeCreator : MonoBehaviour
         return false;
     }
     
-    public void CreatePipe(PipeType type)
+    public void CreatePipe()
     {
-        int rand = 0;
-        GameObject tempPipe;
-        switch (type)
+        var rand = 0;
+        while (rand == _currentGeneralPipeIndex)
         {
-            case PipeType.General:
-                while (rand == _currentGeneralPipeIndex)
-                {
-                    rand = Random.Range(0, pipeWidths.Count);
-                }
-
-                _currentGeneralPipeIndex = rand;
-                
-                tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
-                tempPipe.transform.localScale += new Vector3(
-                        pipeWidths[rand],
-                        pipeSizes[Random.Range(0, pipeSizes.Count)], 
-                        pipeWidths[rand]
-                        );
-                break;
-            case PipeType.Obstecle:
-                rand = Random.Range(0, obstreclePipe.Count);
-                tempPipe = Instantiate(obstreclePipe[rand], createLocation.position, createLocation.rotation, pipeHolder);
-                break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(type), type, null);
+            rand = Random.Range(0, pipeWidths.Count);
         }
-        _bufferListOfPipes.Add(tempPipe);
+
+        _currentGeneralPipeIndex = rand;
+        
+        var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
+        tempPipe.transform.localScale += new Vector3(
+                pipeWidths[rand],
+                pipeSizes[Random.Range(0, pipeSizes.Count)], 
+                pipeWidths[rand]
+                );
+    }
+
+    public void CreateObstrecle()
+    {
+        var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
+        tempPipe.transform.localScale = new Vector3(2, 2, tempPipe.transform.localScale.z);
     }
 }
