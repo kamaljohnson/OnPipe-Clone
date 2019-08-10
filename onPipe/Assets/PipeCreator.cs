@@ -25,6 +25,7 @@ public class PipeCreator : MonoBehaviour
     public Transform pipeDeletionSensor;
 
     public Transform createLocation;
+    public Transform obstrecleCreationLocation;
 
     private int _currentGeneralPipeIndex;
 
@@ -57,6 +58,7 @@ public class PipeCreator : MonoBehaviour
             if (_obstrecleCreationTimer > obstrecleCreationDelay)
             {
                 CreateObstrecle();
+                _obstrecleCreationTimer = 0;
             }
         }
         
@@ -113,7 +115,7 @@ public class PipeCreator : MonoBehaviour
 
     public void CreateObstrecle()
     {
-        var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
-        tempPipe.transform.localScale = new Vector3(2, 2, tempPipe.transform.localScale.z);
+        var tempPipe = Instantiate(obstreclePipe[0], obstrecleCreationLocation.position, createLocation.rotation, pipeHolder);
+        tempPipe.transform.localScale = new Vector3(2, tempPipe.transform.localScale.y, 2);
     }
 }
