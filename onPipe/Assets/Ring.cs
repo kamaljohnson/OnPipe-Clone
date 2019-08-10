@@ -13,10 +13,10 @@ public class Ring : MonoBehaviour
     public float ringContractSpeed;
 
     public Transform ringContractionSensor1;
-    public Transform ringContractionSensor2;
     public float fitOffsetLimit;
     
     private bool _pressedScreen;
+    private float contractLimit;
     
     public void Start()
     {
@@ -25,7 +25,6 @@ public class Ring : MonoBehaviour
 
     public void Update()
     {
-
         _pressedScreen = Input.GetKey(KeyCode.Space);
         
         if (_pressedScreen)
@@ -44,7 +43,7 @@ public class Ring : MonoBehaviour
         if (checkRingContractable())
         {
             Debug.Log("contracting");
-            ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, new Vector3(0, 0, ring.transform.localScale.z), ringExpandSpeed * Time.deltaTime);
+            ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, new Vector3(contractLimit, contractLimit, ring.transform.localScale.z), ringExpandSpeed * Time.deltaTime);
         }
     }
 
@@ -58,12 +57,20 @@ public class Ring : MonoBehaviour
 
     public bool checkRingContractable()
     {
-        if (Physics.Raycast(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward,
-            fitOffsetLimit))
+        RaycastHit hit;
+        
+        if (Physics.Raycast(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward, out hit, 20))
         {
-            return false;
+            contractLimit = hit.point.x + fitOffsetLimit;
+            Debug.DrawRay(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward * Vector3.Distance(hit.point, ringContractionSensor1.position), Color.red, 1);
+        }
+        else
+        {
+            contractLimit = 0;
+            Debug.DrawRay(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward * 20, Color.blue, 1);
         }
         return true;
     }
     
 }
+    
