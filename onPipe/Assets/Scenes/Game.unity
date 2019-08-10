@@ -317,13 +317,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.08771148, y: -0, z: -0, w: 0.99614596}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.16234373, y: -0, z: -0, w: 0.98673433}
+  m_LocalPosition: {x: 0, y: -0.79, z: -9.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -10.064, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -18.686, y: 0, z: 0}
 --- !u!1 &1304159127
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,12 +631,17 @@ PrefabInstance:
     - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
         type: 3}
       propertyPath: ringExpandSpeed
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
         type: 3}
       propertyPath: ringContractSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: maxRingSize
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}

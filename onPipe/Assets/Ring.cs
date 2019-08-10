@@ -25,8 +25,15 @@ public class Ring : MonoBehaviour
 
     public void Update()
     {
-        _pressedScreen = Input.GetKey(KeyCode.Space);
-        
+        if (Application.isEditor)
+        {
+            _pressedScreen = Input.GetKey(KeyCode.Space);
+        }
+        else
+        {
+            _pressedScreen = Input.touchCount >= 1;
+        }
+
         if (_pressedScreen)
         {
             Contract();
