@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEditor;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 public enum GameStatus
@@ -14,8 +16,6 @@ public enum GameStatus
 public class PipeCreator : MonoBehaviour
 {
     private float _pipeSpeed;
-    public float obstrecleCreationDelay;
-    private float _obstrecleCreationTimer;
     
     public GameObject generalPipe;
     public List<GameObject> obstreclePipe;
@@ -23,9 +23,14 @@ public class PipeCreator : MonoBehaviour
     private Transform pipeHolder;
     public Transform pipeCreationSensor;
     public Transform pipeDeletionSensor;
-
-    public Transform createLocation;
+    
     public Transform obstrecleCreationLocation;
+    public Transform obstrecleCreationSensor;
+    public float maxObstrecleCreationDelay;
+    private float _obstrecleCreationTimer;
+    private bool _newObstrecleCreated;
+    
+    public Transform createLocation;
 
     private int _currentGeneralPipeIndex;
 
@@ -40,6 +45,7 @@ public class PipeCreator : MonoBehaviour
     {
         _pipeSpeed = gameObject.GetComponent<Game>().pipeSpeed;
         pipeHolder = gameObject.GetComponent<Game>().pipeHolder;
+        _newObstrecleCreated = true;
         
         _currentGeneralPipeIndex = 0;
         _createPipe = true;
@@ -50,22 +56,20 @@ public class PipeCreator : MonoBehaviour
         
         if (checkPipeCreationSensor())
         {
-            _createPipe = true;
+            CreatePipe();
+            _newObstrecleCreated = false;
+            _obstrecleCreationTimer = 0;
         }
-        else
+
+        if (!_newObstrecleCreated)
         {
             _obstrecleCreationTimer += Time.deltaTime;
-            if (_obstrecleCreationTimer > obstrecleCreationDelay)
-            {
-                CreateObstrecle();
-                _obstrecleCreationTimer = 0;
-            }
         }
         
-        if (_createPipe)
+        if (_obstrecleCreationTimer > Random.Range(1, maxObstrecleCreationDelay))
         {
-            CreatePipe();
-            _createPipe = false;
+            CreateObstrecle();
+            _obstrecleCreationTimer = 0;
         }
         
         checkPipeDeletionSensor();
@@ -108,14 +112,24 @@ public class PipeCreator : MonoBehaviour
         var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
         tempPipe.transform.localScale += new Vector3(
                 pipeWidths[rand],
-                pipeSizes[Random.Range(0, pipeSizes.Count)], 
+                pipeSizes[Random.Range(0, pipeSizes.Count)],
                 pipeWidths[rand]
                 );
     }
 
     public void CreateObstrecle()
     {
-        var tempPipe = Instantiate(obstreclePipe[0], obstrecleCreationLocation.position, createLocation.rotation, pipeHolder);
-        tempPipe.transform.localScale = new Vector3(2, tempPipe.transform.localScale.y, 2);
+        var rand = Random.RandomRange(0, 2);
+        var tempPipe = Instantiate(obstreclePipe[rand], obstrecleCreationLocation.position, Quaternion.identity, pipeHolder);
+        
+        Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
+        Physics.Raycast(obstrecleCreationSensor.position, obstrecleCreationSensor.forward, out var hit, 10);
+        Debug.Log(hit.transform.parent.localScale);
+        if (rand == 0)
+        {
+            tempPipe.transform.localScale = new Vector3(hit.transform.parent.localScale.z + .5f, tempPipe.transform.localScale.y, hit.transform.parent.localScale.z + .5f);    
+        }
+
+        _newObstrecleCreated = true;
     }
 }

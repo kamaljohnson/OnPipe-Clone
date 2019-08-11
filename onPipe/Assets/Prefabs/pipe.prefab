@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 924162778785830049}
   m_Layer: 0
-  m_Name: C-1
+  m_Name: pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4940523378604095013}
   - component: {fileID: 4940523378604095012}
   - component: {fileID: 4940523378604095011}
-  - component: {fileID: 406012730785530894}
+  - component: {fileID: 5462274899438411831}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Untagged
@@ -109,8 +109,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &406012730785530894
-MeshCollider:
+--- !u!65 &5462274899438411831
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,7 +119,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1.9089372, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: -0.045531392, z: -0.00000011920929}
