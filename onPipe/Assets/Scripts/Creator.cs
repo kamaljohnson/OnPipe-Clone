@@ -13,16 +13,27 @@ public enum GameStatus
     GameOver
 }
 
-public class PipeCreator : MonoBehaviour
+public class Creator : MonoBehaviour
 {
     private float _pipeSpeed;
     
     public GameObject generalPipe;
     public List<GameObject> obstreclePipe;
+    public GameObject fillerFrame;
 
     private Transform pipeHolder;
     public Transform pipeCreationSensor;
     public Transform pipeDeletionSensor;
+
+    public Transform fillerCreatioinSensor;
+    public Transform fillerPipeSizeChangeSensor;
+    public Transform fillerCreationLocation;
+    private bool _createFiller;
+    private bool _fillerCreationStarted;
+    public float fillerOffsetDelay;
+    public float fillerGapDelay;
+    private float _fillerCreationCounter;             
+    private float _currentPipeSize;
     
     public Transform obstrecleCreationLocation;
     public Transform obstrecleCreationSensor;
@@ -49,6 +60,10 @@ public class PipeCreator : MonoBehaviour
         
         _currentGeneralPipeIndex = 0;
         _createPipe = true;
+
+        _fillerCreationStarted = false;
+        _createFiller = false;
+        _fillerCreationCounter = 0;
     }
 
     void Update()
@@ -61,15 +76,44 @@ public class PipeCreator : MonoBehaviour
             _obstrecleCreationTimer = 0;
         }
 
+        checkFillerCreationSensor();
+        
         if (!_newObstrecleCreated)
         {
             _obstrecleCreationTimer += Time.deltaTime;
-        }
+        }                              
         
         if (_obstrecleCreationTimer > Random.Range(1, maxObstrecleCreationDelay))
         {
             CreateObstrecle();
             _obstrecleCreationTimer = 0;
+        }
+        
+        if (_createFiller)
+        {
+            _fillerCreationCounter += Time.deltaTime;
+            if (!_fillerCreationStarted)
+            {
+                if (_fillerCreationCounter >= fillerOffsetDelay)
+                {
+                    _fillerCreationStarted = true;
+                    CreateFillers();
+                    _fillerCreationCounter = 0;
+                }
+            }
+            else
+            {
+                if (_fillerCreationCounter >= fillerGapDelay)
+                {
+                    CreateFillers();
+                    _fillerCreationCounter = 0;
+                }
+            }
+        }
+        else
+        {
+            _fillerCreationCounter = 0;
+            _fillerCreationStarted = false;
         }
         
         checkPipeDeletionSensor();
@@ -98,6 +142,30 @@ public class PipeCreator : MonoBehaviour
 
         return false;
     }
+
+    private void checkFillerCreationSensor()
+    {
+        
+        if (Physics.Raycast(fillerPipeSizeChangeSensor.position, fillerPipeSizeChangeSensor.forward, out var hit, 10))
+        {
+
+            if (hit.collider.CompareTag("Obstrecle"))
+            {
+                _createFiller = false;
+                return;
+            }
+            _createFiller = true;
+
+            var tempCurrentPipeSize = hit.transform.parent.localScale.z;
+            Debug.Log(tempCurrentPipeSize);
+            if (Math.Abs(_currentPipeSize - tempCurrentPipeSize) > 0.0001f)
+            {
+                _currentPipeSize = tempCurrentPipeSize;
+                _createFiller = false;
+                Debug.Log("here");
+            }
+        }
+    }
     
     public void CreatePipe()
     {
@@ -124,7 +192,6 @@ public class PipeCreator : MonoBehaviour
         
         Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
         Physics.Raycast(obstrecleCreationSensor.position, obstrecleCreationSensor.forward, out var hit, 10);
-        Debug.Log(hit.transform.parent.localScale);
         if (rand == 0)
         {
             tempPipe.transform.localScale = new Vector3(hit.transform.parent.localScale.z + .5f, tempPipe.transform.localScale.y, hit.transform.parent.localScale.z + .5f);    
@@ -132,4 +199,15 @@ public class PipeCreator : MonoBehaviour
 
         _newObstrecleCreated = true;
     }
+
+    public void CreateFillers()
+    {
+        Physics.Raycast(fillerCreatioinSensor.position, fillerCreatioinSensor.forward, out var hit, 10);
+        if (!hit.collider.CompareTag("Obstrecle"))
+        {
+            var tempPipe = Instantiate(fillerFrame, fillerCreationLocation.position, Quaternion.identity, pipeHolder);
+            tempPipe.transform.GetChild(0).localScale = new Vector3( hit.transform.parent.localScale.z, tempPipe.transform.localScale.y,  hit.transform.parent.localScale.z);
+        }
+    }
+    
 }

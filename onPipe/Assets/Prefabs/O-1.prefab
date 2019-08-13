@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1398003347068695097}
   m_Layer: 0
   m_Name: mesh
-  m_TagString: Untagged
+  m_TagString: Obstrecle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6741710610501395484}
   m_Layer: 0
   m_Name: O-1
-  m_TagString: Untagged
+  m_TagString: Obstrecle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
