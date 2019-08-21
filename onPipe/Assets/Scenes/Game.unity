@@ -649,13 +649,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701016645}
-  m_LocalRotation: {x: -0.5000001, y: -0.49999994, z: 0.49999994, w: 0.5}
+  m_LocalRotation: {x: -0.50000024, y: -0.4999998, z: 0.5, w: 0.50000006}
   m_LocalPosition: {x: 1.41, y: 0.2, z: 0.17}
   m_LocalScale: {x: 0.16874999, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 90.00001}
 --- !u!1 &1716083714
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +849,33 @@ PrefabInstance:
       propertyPath: maxRingSize
       value: 1.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1648996095213069828, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.248888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648996095213069828, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.9412223
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648996095213069828, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.017621873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648996095213069828, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 1.9197049e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699630787588195188, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 962925942646630681, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}
+    - {fileID: 7699630787588195188, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}
+    - {fileID: 1648996095213069828, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}

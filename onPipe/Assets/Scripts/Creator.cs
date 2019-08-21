@@ -157,12 +157,10 @@ public class Creator : MonoBehaviour
             _createFiller = true;
 
             var tempCurrentPipeSize = hit.transform.parent.localScale.z;
-            Debug.Log(tempCurrentPipeSize);
             if (Math.Abs(_currentPipeSize - tempCurrentPipeSize) > 0.0001f)
             {
                 _currentPipeSize = tempCurrentPipeSize;
                 _createFiller = false;
-                Debug.Log("here");
             }
         }
     }
@@ -206,7 +204,7 @@ public class Creator : MonoBehaviour
         if (!hit.collider.CompareTag("Obstrecle"))
         {
             var tempPipe = Instantiate(fillerFrame, fillerCreationLocation.position, Quaternion.identity, pipeHolder);
-            tempPipe.transform.GetChild(0).localScale = new Vector3( hit.transform.parent.localScale.z, tempPipe.transform.localScale.y,  hit.transform.parent.localScale.z);
+            tempPipe.transform.GetChild(0).localScale = new Vector3( hit.transform.parent.localScale.z + 0.1f, tempPipe.transform.localScale.y,  hit.transform.parent.localScale.z + 0.1f);
         }
     }
     

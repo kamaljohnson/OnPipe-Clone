@@ -4,15 +4,16 @@
     <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Red 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/O-1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/O-1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/O-2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/O-2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/filler 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/filler 1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/filler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/filler.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/filler.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/filler.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pipe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ring.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ring.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PipeCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PipeCreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ring.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,70 +22,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-              <folding>
-                <marker date="1565722849574" expanded="true" signature="59:896" ph="{...}" />
-                <marker date="1565722849574" expanded="true" signature="125:157" ph="{...}" />
-                <marker date="1565722849574" expanded="true" signature="185:894" ph="{...}" />
-                <marker date="1565722849574" expanded="true" signature="477:888" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Creator.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-              <folding>
-                <marker date="1565723878118" expanded="true" signature="6:179" ph="..." />
-                <marker date="1565723878118" expanded="true" signature="203:245" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="283:6597" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="1420:1781" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="1800:3164" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="1854:1983" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2065:2140" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2261:2353" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2389:2997" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2494:2759" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2573:2745" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2776:2987" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="2852:2973" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="3010:3114" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="3207:3634" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="3434:3628" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="3681:4083" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="3907:4054" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="4129:4821" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="4263:4815" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="4328:4419" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="4647:4805" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="4855:5375" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="4932:5006" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="5410:6076" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="5836:6032" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="6109:6590" ph="{...}" />
-                <marker date="1565723878118" expanded="true" signature="6271:6584" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Creator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ring.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -97,6 +41,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PipeCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
       </list>
     </option>
   </component>
@@ -105,22 +50,12 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/indexLayout.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/projectSettingsUpdater.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
+  <component name="ProjectId" id="1PRo9jqEcPnUIrr6ieVQ4p4Hs5u" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes />
-  </component>
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -173,84 +108,52 @@
       <workItem from="1565592226635" duration="3364000" />
       <workItem from="1565604066040" duration="4817000" />
       <workItem from="1565694091910" duration="4515000" />
-      <workItem from="1565714723682" duration="4545000" />
+      <workItem from="1565714723682" duration="7662000" />
+      <workItem from="1565816639288" duration="767000" />
+      <workItem from="1565846142974" duration="1159000" />
+      <workItem from="1566043503911" duration="1683000" />
     </task>
+    <task id="LOCAL-00001" summary="filler creation">
+      <created>1565726299135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565726299135</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updating">
+      <created>1565726315352</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565726315352</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49197000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24980174" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32958034" />
-      <window_info anchor="bottom" id="Unity" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24980174" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" order="0" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Performance Profiler" order="7" />
-      <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Errors In Solution" order="0" />
-      <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="right" id="Unit Tests Coverage" order="2" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+    <MESSAGE value="filler creation" />
+    <MESSAGE value="updating" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -260,62 +163,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/ObstrecleCreator.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/PipeCreator.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Ring.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Game.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/ItemFiller.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <marker date="1565722849574" expanded="true" signature="59:896" ph="{...}" />
-            <marker date="1565722849574" expanded="true" signature="125:157" ph="{...}" />
-            <marker date="1565722849574" expanded="true" signature="185:894" ph="{...}" />
-            <marker date="1565722849574" expanded="true" signature="477:888" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Creator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
-          <folding>
-            <marker date="1565723878118" expanded="true" signature="6:179" ph="..." />
-            <marker date="1565723878118" expanded="true" signature="203:245" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="283:6597" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="1420:1781" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="1800:3164" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="1854:1983" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2065:2140" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2261:2353" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2389:2997" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2494:2759" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2573:2745" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2776:2987" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="2852:2973" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="3010:3114" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="3207:3634" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="3434:3628" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="3681:4083" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="3907:4054" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="4129:4821" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="4263:4815" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="4328:4419" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="4647:4805" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="4855:5375" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="4932:5006" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="5410:6076" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="5836:6032" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="6109:6590" ph="{...}" />
-            <marker date="1565723878118" expanded="true" signature="6271:6584" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

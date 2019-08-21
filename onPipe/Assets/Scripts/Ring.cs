@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class Ring : MonoBehaviour
 {
@@ -49,7 +50,6 @@ public class Ring : MonoBehaviour
     {
         if (checkRingContractable())
         {
-            Debug.Log("contracting");
             ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, new Vector3(contractLimit, contractLimit, ring.transform.localScale.z), ringExpandSpeed * Time.deltaTime);
         }
     }
@@ -78,6 +78,14 @@ public class Ring : MonoBehaviour
         }
         return true;
     }
-    
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("ring hit");
+        if (other.CompareTag("Filler"))
+        {
+            Destroy(other);
+        }
+    }
 }
     
