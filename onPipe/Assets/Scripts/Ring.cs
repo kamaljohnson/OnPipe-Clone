@@ -39,6 +39,11 @@ public class Ring : MonoBehaviour
 
         if (_pressedScreen)
         {
+            if (Game.gameState == GameStatus.AtMenu)
+            {
+                Game.gameState = GameStatus.Playing;
+                FindObjectOfType<Game>().onGameStart();
+            }
             Contract();
         }
         else

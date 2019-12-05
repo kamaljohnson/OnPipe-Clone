@@ -22,12 +22,13 @@ public class ItemFiller : MonoBehaviour
         if (!_plucked)
         {
             if (Ring.RingClosed && Math.Abs(Vector3.Distance(transform.position,Vector3.zero)) < 0.2f)
-            {
+            {                
+                Game.bucketFill++;
+                _plucked = true;
                 foreach (var t in _fillerItems)
                 {
                     t.GetComponent<ItemHolder>().fillerAnimator.Play("pluckAnimation", 0, 0);
                 }
-                _plucked = true;
             }
         }
     }

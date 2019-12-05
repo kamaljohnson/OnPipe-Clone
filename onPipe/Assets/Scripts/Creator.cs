@@ -6,13 +6,6 @@ using UnityEngine;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
-public enum GameStatus
-{
-    Playing,
-    AtMenu,
-    GameOver
-}
-
 public class Creator : MonoBehaviour
 {
     private float _pipeSpeed;
@@ -23,7 +16,6 @@ public class Creator : MonoBehaviour
 
     private Transform _pipeHolder;
     public Transform pipeCreationSensor;
-    public Transform pipeDeletionSensor;
 
     public Transform fillerCreatioinSensor;
     public Transform fillerPipeSizeChangeSensor;
@@ -173,6 +165,11 @@ public class Creator : MonoBehaviour
     public void CreateObstrecle()
     {
         var rand = Random.RandomRange(0, 2);
+        if (Game.gameState != GameStatus.Playing)
+        {
+            rand = 0;
+        }
+        
         var tempPipe = Instantiate(obstreclePipe[rand], obstrecleCreationLocation.position, Quaternion.identity, _pipeHolder);
         
         Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
