@@ -21,7 +21,7 @@ public class Creator : MonoBehaviour
     public List<GameObject> obstreclePipe;
     public GameObject fillerFrame;
 
-    private Transform pipeHolder;
+    private Transform _pipeHolder;
     public Transform pipeCreationSensor;
     public Transform pipeDeletionSensor;
 
@@ -55,7 +55,7 @@ public class Creator : MonoBehaviour
     void Start()
     {
         _pipeSpeed = gameObject.GetComponent<Game>().pipeSpeed;
-        pipeHolder = gameObject.GetComponent<Game>().pipeHolder;
+        _pipeHolder = gameObject.GetComponent<Game>().pipeHolder;
         _newObstrecleCreated = true;
         _currentGeneralPipeIndex = 0;
         _createPipe = true;
@@ -68,14 +68,14 @@ public class Creator : MonoBehaviour
     void Update()
     {
         
-        if (checkPipeCreationSensor())
+        if (CheckPipeCreationSensor())
         {
             CreatePipe();
             _newObstrecleCreated = false;
             _obstrecleCreationTimer = 0;
         }
 
-        checkFillerCreationSensor();
+        CheckFillerCreationSensor();
         
         if (!_newObstrecleCreated)
         {
@@ -116,7 +116,7 @@ public class Creator : MonoBehaviour
         }
     }
 
-    public bool checkPipeCreationSensor()
+    public bool CheckPipeCreationSensor()
     {
         RaycastHit hit;
         Debug.DrawRay(pipeCreationSensor.position, pipeCreationSensor.forward * 10, Color.red);
@@ -129,7 +129,7 @@ public class Creator : MonoBehaviour
         return false;
     }
 
-    private void checkFillerCreationSensor()
+    private void CheckFillerCreationSensor()
     {
         
         if (Physics.Raycast(fillerPipeSizeChangeSensor.position, fillerPipeSizeChangeSensor.forward, out var hit, 10))
@@ -161,7 +161,7 @@ public class Creator : MonoBehaviour
 
         _currentGeneralPipeIndex = rand;
         
-        var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, pipeHolder);
+        var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, _pipeHolder);
         tempPipe.transform.localScale += new Vector3(
                 pipeWidths[rand],
                 pipeSizes[Random.Range(0, pipeSizes.Count)],
@@ -173,7 +173,7 @@ public class Creator : MonoBehaviour
     public void CreateObstrecle()
     {
         var rand = Random.RandomRange(0, 2);
-        var tempPipe = Instantiate(obstreclePipe[rand], obstrecleCreationLocation.position, Quaternion.identity, pipeHolder);
+        var tempPipe = Instantiate(obstreclePipe[rand], obstrecleCreationLocation.position, Quaternion.identity, _pipeHolder);
         
         Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
         Physics.Raycast(obstrecleCreationSensor.position, obstrecleCreationSensor.forward, out var hit, 10);
@@ -181,7 +181,7 @@ public class Creator : MonoBehaviour
         {
             tempPipe.transform.localScale = new Vector3(hit.transform.parent.localScale.z + .5f, tempPipe.transform.localScale.y, hit.transform.parent.localScale.z + .5f);    
         }
-        Destroy(tempPipe, 10);
+        Destroy(tempPipe, 8);
         _newObstrecleCreated = true;
     }
 
@@ -190,7 +190,7 @@ public class Creator : MonoBehaviour
         Physics.Raycast(fillerCreatioinSensor.position, fillerCreatioinSensor.forward, out var hit, 10);
         if (!hit.collider.CompareTag("Obstrecle"))
         {
-            var tempPipe = Instantiate(fillerFrame, fillerCreationLocation.position, Quaternion.identity, pipeHolder);
+            var tempPipe = Instantiate(fillerFrame, fillerCreationLocation.position, Quaternion.identity, _pipeHolder);
             tempPipe.transform.GetChild(0).localScale = new Vector3( hit.transform.parent.localScale.z + 0.1f, tempPipe.transform.localScale.y,  hit.transform.parent.localScale.z + 0.1f);
         }
     }

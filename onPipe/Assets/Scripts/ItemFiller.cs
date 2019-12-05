@@ -1,15 +1,35 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ItemFiller : MonoBehaviour
 {
-
     public GameObject fillerItem;
+    private List<GameObject> _fillerItems = new List<GameObject>();
     
-    public int FillerLifeSpan;
+    [FormerlySerializedAs("FillerLifeSpan")] public int fillerLifeSpan;
+    private bool _plucked = false;
+    
     public void Start()
     {
         FillItem();
-        Destroy(gameObject, FillerLifeSpan);
+        Destroy(gameObject, fillerLifeSpan);
+    }
+
+    public void Update()
+    {
+        if (!_plucked)
+        {
+            if (Ring.RingClosed && Math.Abs(Vector3.Distance(transform.position,Vector3.zero)) < 0.2f)
+            {
+                foreach (var t in _fillerItems)
+                {
+                    t.GetComponent<ItemHolder>().fillerAnimator.Play("pluckAnimation", 0, 0);
+                }
+                _plucked = true;
+            }
+        }
     }
 
     public void FillItem()
@@ -28,6 +48,7 @@ public class ItemFiller : MonoBehaviour
             tempObj.transform.LookAt(transform);
             tempObj.transform.eulerAngles = new Vector3(0, tempObj.transform.eulerAngles.y, 0);
             i += angle;
+            _fillerItems.Add(tempObj);
         }
     }
 }
