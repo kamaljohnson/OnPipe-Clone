@@ -57,7 +57,6 @@ public class Creator : MonoBehaviour
         _pipeSpeed = gameObject.GetComponent<Game>().pipeSpeed;
         pipeHolder = gameObject.GetComponent<Game>().pipeHolder;
         _newObstrecleCreated = true;
-        
         _currentGeneralPipeIndex = 0;
         _createPipe = true;
 
@@ -115,21 +114,8 @@ public class Creator : MonoBehaviour
             _fillerCreationCounter = 0;
             _fillerCreationStarted = false;
         }
-        
-        checkPipeDeletionSensor();
     }
 
-    public void checkPipeDeletionSensor()
-    {
-        RaycastHit hit;
-        Debug.DrawRay(pipeDeletionSensor.position, pipeDeletionSensor.forward * 10, Color.green);
-        if (Physics.Raycast(pipeDeletionSensor.position, pipeDeletionSensor.forward, out hit, 10))
-        {
-            Debug.DrawRay(pipeDeletionSensor.position, pipeDeletionSensor.forward * 10, Color.red);
-            Destroy(hit.collider.gameObject.transform.parent.gameObject);
-        }
-    }
-    
     public bool checkPipeCreationSensor()
     {
         RaycastHit hit;
@@ -181,6 +167,7 @@ public class Creator : MonoBehaviour
                 pipeSizes[Random.Range(0, pipeSizes.Count)],
                 pipeWidths[rand]
                 );
+        Destroy(tempPipe, 10);
     }
 
     public void CreateObstrecle()
@@ -194,7 +181,7 @@ public class Creator : MonoBehaviour
         {
             tempPipe.transform.localScale = new Vector3(hit.transform.parent.localScale.z + .5f, tempPipe.transform.localScale.y, hit.transform.parent.localScale.z + .5f);    
         }
-
+        Destroy(tempPipe, 10);
         _newObstrecleCreated = true;
     }
 

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillerItem: {fileID: 6741710610501395480, guid: c6b97cb09d2fdd34088dcea0de7d14cf,
     type: 3}
+  FillerLifeSpan: 8
 --- !u!1 &8589803870243807851
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +113,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

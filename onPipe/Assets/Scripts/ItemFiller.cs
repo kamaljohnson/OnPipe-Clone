@@ -5,9 +5,11 @@ public class ItemFiller : MonoBehaviour
 
     public GameObject fillerItem;
     
+    public int FillerLifeSpan;
     public void Start()
     {
         FillItem();
+        Destroy(gameObject, FillerLifeSpan);
     }
 
     public void FillItem()
