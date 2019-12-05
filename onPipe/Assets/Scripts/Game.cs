@@ -81,7 +81,7 @@ public class Game : MonoBehaviour
     public void GameOver()
     {
         GameState = GameStatus.GameOver;
-        Time.timeScale = 0.5f;
+        Time.timeScale = 0.3f;
     }
 
     public void HandleLoadScreen()
