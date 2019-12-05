@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillerItem: {fileID: 6741710610501395480, guid: c6b97cb09d2fdd34088dcea0de7d14cf,
     type: 3}
-  FillerLifeSpan: 8
+  fillerLifeSpan: 7
 --- !u!1 &8589803870243807851
 GameObject:
   m_ObjectHideFlags: 0

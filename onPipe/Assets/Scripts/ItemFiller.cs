@@ -37,7 +37,7 @@ public class ItemFiller : MonoBehaviour
         var arcLength = fillerItem.transform.GetChild(0).localScale.x;
         
         var radius = transform.GetChild(0).localScale.x;
-        float angle = arcLength / radius;
+        float angle = arcLength / radius + 0.3f;
         Vector3 centre = transform.position;
         
         float i = 0;
