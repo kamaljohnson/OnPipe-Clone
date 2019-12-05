@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Serialization;
 
 
 namespace TMPro.Examples
@@ -8,20 +9,20 @@ namespace TMPro.Examples
     public class Benchmark02 : MonoBehaviour
     {
 
-        public int SpawnType = 0;
-        public int NumberOfNPC = 12;
+        [FormerlySerializedAs("SpawnType")] public int spawnType = 0;
+        [FormerlySerializedAs("NumberOfNPC")] public int numberOfNpc = 12;
 
-        private TextMeshProFloatingText floatingText_Script;
+        private TextMeshProFloatingText _floatingTextScript;
 
 
         void Start()
         {
 
-            for (int i = 0; i < NumberOfNPC; i++)
+            for (int i = 0; i < numberOfNpc; i++)
             {
 
 
-                if (SpawnType == 0)
+                if (spawnType == 0)
                 {
                     // TextMesh Pro Implementation
                     GameObject go = new GameObject();
@@ -40,10 +41,10 @@ namespace TMPro.Examples
                     textMeshPro.text = "!";
                        
                     // Spawn Floating Text
-                    floatingText_Script = go.AddComponent<TextMeshProFloatingText>();
-                    floatingText_Script.SpawnType = 0;
+                    _floatingTextScript = go.AddComponent<TextMeshProFloatingText>();
+                    _floatingTextScript.spawnType = 0;
                 }
-                else if (SpawnType == 1)
+                else if (spawnType == 1)
                 {
                     // TextMesh Implementation
                     GameObject go = new GameObject();
@@ -60,10 +61,10 @@ namespace TMPro.Examples
                     textMesh.text = "!";
 
                     // Spawn Floating Text
-                    floatingText_Script = go.AddComponent<TextMeshProFloatingText>();
-                    floatingText_Script.SpawnType = 1;
+                    _floatingTextScript = go.AddComponent<TextMeshProFloatingText>();
+                    _floatingTextScript.spawnType = 1;
                 }
-                else if (SpawnType == 2)
+                else if (spawnType == 2)
                 {
                     // Canvas WorldSpace Camera
                     GameObject go = new GameObject();
@@ -82,8 +83,8 @@ namespace TMPro.Examples
                     textObject.text = "!";
 
                     // Spawn Floating Text
-                    floatingText_Script = go.AddComponent<TextMeshProFloatingText>();
-                    floatingText_Script.SpawnType = 0;
+                    _floatingTextScript = go.AddComponent<TextMeshProFloatingText>();
+                    _floatingTextScript.spawnType = 0;
                 }
 
                    

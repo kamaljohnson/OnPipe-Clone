@@ -369,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696410322}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.94, z: 0.16999987}
+  m_LocalPosition: {x: 0, y: 11.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &858284510
 RectTransform:
   m_ObjectHideFlags: 0
@@ -987,7 +987,8 @@ MonoBehaviour:
   currentLevelText: {fileID: 1619430025}
   tapToStartText: {fileID: 1481534600}
   currentLevelProgressSlider: {fileID: 668845588}
-  LoadScreen: {fileID: 858284509}
+  loadScreen: {fileID: 858284509}
+  loadScreenDelay: 7
 --- !u!1 &1429317149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429317149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 15.43, z: 0.16999987}
+  m_LocalPosition: {x: 0, y: 15.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1378,7 +1379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619521173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.87, z: 0.16999987}
+  m_LocalPosition: {x: 0, y: 13.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1695,7 +1696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031255506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000000059604645, y: 0.55999994, z: 0.16999987}
+  m_LocalPosition: {x: 0, y: 0.55999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2046,6 +2047,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323151097789984100, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323151097789984100, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 962925942646630681, guid: a98453c1968b55d42bf42e3ae9f01645, type: 3}

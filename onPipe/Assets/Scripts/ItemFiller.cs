@@ -23,7 +23,7 @@ public class ItemFiller : MonoBehaviour
         {
             if (Ring.RingClosed && Math.Abs(Vector3.Distance(transform.position,Vector3.zero)) < 0.2f)
             {                
-                Game.bucketFill++;
+                Game.BucketFill++;
                 _plucked = true;
                 foreach (var t in _fillerItems)
                 {

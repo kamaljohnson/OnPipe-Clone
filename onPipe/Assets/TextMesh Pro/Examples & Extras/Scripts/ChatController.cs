@@ -2,25 +2,26 @@
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class ChatController : MonoBehaviour {
 
 
-    public TMP_InputField TMP_ChatInput;
+    [FormerlySerializedAs("TMP_ChatInput")] public TMP_InputField tmpChatInput;
 
-    public TMP_Text TMP_ChatOutput;
+    [FormerlySerializedAs("TMP_ChatOutput")] public TMP_Text tmpChatOutput;
 
-    public Scrollbar ChatScrollbar;
+    [FormerlySerializedAs("ChatScrollbar")] public Scrollbar chatScrollbar;
 
     void OnEnable()
     {
-        TMP_ChatInput.onSubmit.AddListener(AddToChatOutput);
+        tmpChatInput.onSubmit.AddListener(AddToChatOutput);
 
     }
 
     void OnDisable()
     {
-        TMP_ChatInput.onSubmit.RemoveListener(AddToChatOutput);
+        tmpChatInput.onSubmit.RemoveListener(AddToChatOutput);
 
     }
 
@@ -28,16 +29,16 @@ public class ChatController : MonoBehaviour {
     void AddToChatOutput(string newText)
     {
         // Clear Input Field
-        TMP_ChatInput.text = string.Empty;
+        tmpChatInput.text = string.Empty;
 
         var timeNow = System.DateTime.Now;
 
-        TMP_ChatOutput.text += "[<#FFFF80>" + timeNow.Hour.ToString("d2") + ":" + timeNow.Minute.ToString("d2") + ":" + timeNow.Second.ToString("d2") + "</color>] " + newText + "\n";
+        tmpChatOutput.text += "[<#FFFF80>" + timeNow.Hour.ToString("d2") + ":" + timeNow.Minute.ToString("d2") + ":" + timeNow.Second.ToString("d2") + "</color>] " + newText + "\n";
 
-        TMP_ChatInput.ActivateInputField();
+        tmpChatInput.ActivateInputField();
 
         // Set the scrollbar to the bottom when next text is submitted.
-        ChatScrollbar.value = 0;
+        chatScrollbar.value = 0;
 
     }
 

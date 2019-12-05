@@ -28,6 +28,7 @@ public class Ring : MonoBehaviour
 
     public void Update()
     {
+        if (Game.GameState == GameStatus.Loading) return;
         if (Application.isEditor)
         {
             _pressedScreen = Input.GetKey(KeyCode.Space);
@@ -39,10 +40,10 @@ public class Ring : MonoBehaviour
 
         if (_pressedScreen)
         {
-            if (Game.gameState == GameStatus.AtMenu)
+            if (Game.GameState == GameStatus.AtMenu)
             {
-                Game.gameState = GameStatus.Playing;
-                FindObjectOfType<Game>().onGameStart();
+                Game.GameState = GameStatus.Playing;
+                FindObjectOfType<Game>().OnGameStart();
             }
             Contract();
         }
@@ -50,7 +51,6 @@ public class Ring : MonoBehaviour
         {
             Expand();
         }
-        
     }
 
     public void Contract()
@@ -92,11 +92,7 @@ public class Ring : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ring hit");
-        if (other.CompareTag("Filler"))
-        {
-            Destroy(other);
-        }
+        FindObjectOfType<Game>().GameOver();
     }
 }
     
