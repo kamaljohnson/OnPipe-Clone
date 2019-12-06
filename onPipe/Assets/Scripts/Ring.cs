@@ -18,6 +18,7 @@ public class Ring : MonoBehaviour
     
     private bool _pressedScreen;
     private float _contractLimit;
+    private float _preContractLimit = 10;
 
     public static bool RingClosed = false;
     
@@ -69,6 +70,8 @@ public class Ring : MonoBehaviour
         {
             ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, maxRingSize * new Vector3(1, 1, ring.transform.localScale.z/maxRingSize), ringExpandSpeed * Time.deltaTime);
         }
+
+        _preContractLimit = 10;
         
         RingClosed = false;
     }
@@ -76,7 +79,7 @@ public class Ring : MonoBehaviour
     public bool CheckRingContractable()
     {
         RaycastHit hit;
-        
+
         if (Physics.Raycast(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward, out hit, 20))
         {
             _contractLimit = hit.point.x + fitOffsetLimit;
@@ -87,12 +90,15 @@ public class Ring : MonoBehaviour
             _contractLimit = 0;
             Debug.DrawRay(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward * 20, Color.blue, 1);
         }
+        
+        if (_preContractLimit < _contractLimit)
+        {
+            FindObjectOfType<Game>().GameOver();
+        }
+        
+        _preContractLimit = _contractLimit;
+        
         return true;
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        FindObjectOfType<Game>().GameOver();
     }
 }
     

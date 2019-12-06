@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 183807103810295896}
   m_Layer: 0
   m_Name: collider
-  m_TagString: Untagged
+  m_TagString: Obstrecle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,8 +43,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15771084, y: 1, z: 1}
-  m_Center: {x: -0.6875091, y: 0, z: 0}
+  m_Size: {x: 0.1360794, y: 0.53383815, z: 1}
+  m_Center: {x: -0.69832474, y: 0, z: 0}
 --- !u!54 &183807103810295896
 Rigidbody:
   m_ObjectHideFlags: 0
