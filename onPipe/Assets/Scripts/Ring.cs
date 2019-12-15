@@ -69,7 +69,8 @@ public class Ring : MonoBehaviour
 
         if (Physics.Raycast(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward, out hit, 20))
         {
-            _contractLimit = hit.point.x + fitOffsetLimit;
+            _contractLimit = -hit.point.z + fitOffsetLimit;
+            Debug.Log(_contractLimit);
             Debug.DrawRay(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward * Vector3.Distance(hit.point, ringContractionSensor1.position), Color.red, 1);
         }
         else
