@@ -19,6 +19,9 @@ public class ItemFiller : MonoBehaviour
 
     public void Update()
     {
+        if(Game.GameState != GameStatus.Playing)
+            return;
+        
         if (!_plucked)
         {
             if (Ring.RingClosed && Math.Abs(Vector3.Distance(transform.position,Vector3.zero)) < 0.2f)

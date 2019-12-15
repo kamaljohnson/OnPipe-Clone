@@ -29,23 +29,10 @@ public class Ring : MonoBehaviour
 
     public void Update()
     {
-        if (Game.GameState == GameStatus.Loading) return;
-        if (Application.isEditor)
+        if (Game.RingLocked) return;
+        
+        if (Input.GetKey(KeyCode.Space) || Input.touchCount >= 1)
         {
-            _pressedScreen = Input.GetKey(KeyCode.Space);
-        }
-        else
-        {
-            _pressedScreen = Input.touchCount >= 1;
-        }
-
-        if (_pressedScreen)
-        {
-            if (Game.GameState == GameStatus.AtMenu)
-            {
-                Game.GameState = GameStatus.Playing;
-                FindObjectOfType<Game>().OnGameStart();
-            }
             Contract();
         }
         else
