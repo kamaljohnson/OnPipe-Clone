@@ -20,28 +20,28 @@ public class Game : MonoBehaviour
     public Transform pipeHolder;
     
     public int currentLevel;
-    public static int BucketFill;
+    public static int bucketFill;
 
     public TMP_Text currentLevelText;
     public GameObject tapToStart;
     public GameObject tapToRestart;
     public Slider currentLevelProgressSlider;
 
-    public static GameStatus GameState;
+    public static GameStatus gameState;
 
     public GameObject loadScreen;
     private float _loadScreenCounter;
     public float loadScreenDelay;
-    public static bool LoadedPipes;
+    private static bool _loadedPipes;
 
-    public static bool RingLocked;
+    public static bool ringLocked;
     private bool _pressed;
 
-    public GameObject ring;
+    public Ring ring;
     
     public void Start()
     {
-        RingLocked = true;
+        ringLocked = true;
         if (!PlayerPrefs.HasKey("CurrentLevel"))
         {
             currentLevel = 1;
@@ -52,17 +52,17 @@ public class Game : MonoBehaviour
         }
         
         currentLevelText.text = currentLevel.ToString();
-        GameState = GameStatus.Loading;
+        gameState = GameStatus.Loading;
     }
 
     void Update()
     {
-        if (GameState == GameStatus.Playing)
+        if (gameState == GameStatus.Playing)
         {
-            currentLevelProgressSlider.value = (float) BucketFill / 100;
-            if (BucketFill == 100)
+            currentLevelProgressSlider.value = (float) bucketFill / 100;
+            if (bucketFill == 100)
             {
-                BucketFill = 0;
+                bucketFill = 0;
                 currentLevel++;
                 currentLevelText.text = currentLevel.ToString();
                 PlayerPrefs.SetInt("CurrentLevel", currentLevel);
@@ -70,12 +70,12 @@ public class Game : MonoBehaviour
         }
         
         pipeHolder.transform.localPosition += new Vector3(0, -Time.deltaTime * pipeSpeed, 0);
-        if (GameState == GameStatus.Loading)
+        if (gameState == GameStatus.Loading)
         {
             HandleLoadScreen();
         }
 
-        if (GameState != GameStatus.Playing)
+        if (gameState != GameStatus.Playing)
         {
             CheckStateChange();
         }
@@ -85,8 +85,7 @@ public class Game : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || (Input.touchCount >= 1 && !_pressed))
         {
-            Debug.Log("pressed");
-            switch (GameState)
+            switch (gameState)
             {
                 case GameStatus.AtMenu:
                     StartGame();
@@ -106,40 +105,38 @@ public class Game : MonoBehaviour
 
     public void ResetGame()
     {
-        GameState = GameStatus.AtMenu;
+        gameState = GameStatus.AtMenu;
         tapToStart.SetActive(true);
         tapToRestart.SetActive(false);
         Time.timeScale = 1;
-        RingLocked = false;
-        ring.SetActive(true);
+        ring.Activate();
     }
 
     public void StartGame()
     {
         tapToStart.SetActive(false);
         tapToRestart.SetActive(false);
-        RingLocked = false;
-        GameState = GameStatus.Playing;
+        gameState = GameStatus.Playing;
+        ring.Activate();
     }
 
     public void GameOver()
     {
-        BucketFill = 0;
+        bucketFill = 0;
         tapToRestart.SetActive(true);
-        GameState = GameStatus.GameOver;
+        gameState = GameStatus.GameOver;
         Time.timeScale = 0.3f;
-        RingLocked = true;
-        ring.SetActive(false);
+        ring.Destruct();
     }
 
     public void HandleLoadScreen()
     {
-        GameState = GameStatus.Loading;
+        gameState = GameStatus.Loading;
         _loadScreenCounter+=Time.deltaTime;
         if (_loadScreenCounter >= loadScreenDelay)
         {
             loadScreen.SetActive(false);
-            LoadedPipes = true;
+            _loadedPipes = true;
             _loadScreenCounter = 0;
             ResetGame();
         }

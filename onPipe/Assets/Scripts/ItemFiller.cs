@@ -19,14 +19,14 @@ public class ItemFiller : MonoBehaviour
 
     public void Update()
     {
-        if(Game.GameState != GameStatus.Playing)
+        if(Game.gameState != GameStatus.Playing)
             return;
         
         if (!_plucked)
         {
             if (Ring.RingClosed && Math.Abs(Vector3.Distance(transform.position,Vector3.zero)) < 0.2f)
             {                
-                Game.BucketFill++;
+                Game.bucketFill++;
                 _plucked = true;
                 foreach (var t in _fillerItems)
                 {

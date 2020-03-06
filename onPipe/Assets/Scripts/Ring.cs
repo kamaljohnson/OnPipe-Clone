@@ -13,7 +13,7 @@ public class Ring : MonoBehaviour
     public float ringExpandSpeed;
     public float ringContractSpeed;
 
-    public Transform ringContractionSensor1;
+    public Transform ringContractionSensor;
     public float fitOffsetLimit;
     
     private bool _pressedScreen;
@@ -21,6 +21,10 @@ public class Ring : MonoBehaviour
     private float _preContractLimit = 10;
 
     public static bool RingClosed = false;
+
+    public static bool IsActive;
+
+    public Game game;
     
     public void Start()
     {
@@ -29,7 +33,7 @@ public class Ring : MonoBehaviour
 
     public void Update()
     {
-        if (Game.RingLocked) return;
+        if (Game.ringLocked) return;
         
         if (Input.GetKey(KeyCode.Space) || Input.touchCount >= 1)
         {
@@ -43,7 +47,7 @@ public class Ring : MonoBehaviour
 
     public void Contract()
     {
-        if (CheckRingContractable())
+        if (CheckRingContractible())
         {
             ring.transform.localScale = Vector3.Lerp(ring.transform.localScale, new Vector3(_contractLimit, _contractLimit, ring.transform.localScale.z), ringExpandSpeed * Time.deltaTime);
         }
@@ -63,30 +67,44 @@ public class Ring : MonoBehaviour
         RingClosed = false;
     }
 
-    public bool CheckRingContractable()
+    private bool CheckRingContractible()
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward, out hit, 20))
+        if (Physics.Raycast(ringContractionSensor.transform.position, ringContractionSensor.transform.forward, out var hit, 20))
         {
             _contractLimit = -hit.point.z + fitOffsetLimit;
-            Debug.Log(_contractLimit);
-            Debug.DrawRay(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward * Vector3.Distance(hit.point, ringContractionSensor1.position), Color.red, 1);
+            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * Vector3.Distance(hit.point, ringContractionSensor.position), Color.red, 0);
         }
         else
         {
             _contractLimit = 0;
-            Debug.DrawRay(ringContractionSensor1.transform.position, ringContractionSensor1.transform.forward * 20, Color.blue, 1);
+            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * 20, Color.blue, 0);
         }
+        
         
         if (_preContractLimit < _contractLimit)
         {
-            FindObjectOfType<Game>().GameOver();
+            Debug.Log("-> " + _preContractLimit + " : " + _contractLimit);
+            game.GameOver();
         }
         
         _preContractLimit = _contractLimit;
         
         return true;
+    }
+
+    public void Activate()
+    {
+        IsActive = true;
+        Game.ringLocked = false;
+        ring.transform.localScale = new Vector3(maxRingSize, maxRingSize, ring.transform.localScale.z);
+        gameObject.SetActive(true);
+    }
+    
+    public void Destruct()
+    {
+        IsActive = false;
+        Game.ringLocked = true;
+        gameObject.SetActive(false);
     }
 }
     

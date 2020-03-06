@@ -50,8 +50,9 @@ MonoBehaviour:
   maxRingSize: 3
   ringExpandSpeed: 10
   ringContractSpeed: 10
-  ringContractionSensor1: {fileID: 0}
+  ringContractionSensor: {fileID: 0}
   fitOffsetLimit: 0
+  game: {fileID: 0}
 --- !u!33 &4934712765691593430
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -83,7 +84,7 @@ MeshCollider:
   m_GameObject: {fileID: 4669758141798452971}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14

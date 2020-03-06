@@ -165,7 +165,7 @@ public class Creator : MonoBehaviour
     public void CreateObstrecle()
     {
         var rand = Random.RandomRange(0, 2);
-        if (Game.GameState != GameStatus.Playing)
+        if (Game.gameState != GameStatus.Playing)
         {
             rand = 0;
         }
