@@ -2,300 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdErrorEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdErrorEventArgs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdFailedToLoadEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdFailedToLoadEventArgs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdPosition.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdRequest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdSize.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdSize.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdapterStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdapterStatus.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/BannerView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/BannerView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/CustomNativeEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/CustomNativeEventArgs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/CustomNativeTemplateAd.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/CustomNativeTemplateAd.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Gender.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Gender.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/InitializationStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/InitializationStatus.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/InterstitialAd.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/InterstitialAd.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Mediation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Mediation/MediationExtras.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Mediation/MediationExtras.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/MobileAds.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/MobileAds.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Reward.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/Reward.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/RewardBasedVideoAd.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/RewardBasedVideoAd.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/RewardedAd.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/RewardedAd.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/ServerSideVerificationOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/ServerSideVerificationOptions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/DummyClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/DummyClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IAdLoaderClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IAdLoaderClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IBannerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IBannerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/ICustomNativeTemplateClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/ICustomNativeTemplateClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IInitializationStatusClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IInitializationStatusClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IInterstitialClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IInterstitialClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IMobileAdsClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IMobileAdsClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IRewardBasedVideoAdClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IRewardBasedVideoAdClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IRewardedAdClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/IRewardedAdClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/MobileAdsEventExecutor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/MobileAdsEventExecutor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/RewardedAdDummyClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/RewardedAdDummyClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/Utils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Common/Utils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/AndroidBuildPostProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/AndroidBuildPostProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettingsEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettingsEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/ManifestProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/ManifestProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/AdLoaderClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/AdLoaderClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/BannerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/BannerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/CustomNativeTemplateClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/CustomNativeTemplateClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/DisplayMetrics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/DisplayMetrics.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/InitializationStatusClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/InitializationStatusClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/InterstitialClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/InterstitialClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/MobileAdsClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/MobileAdsClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/RewardBasedVideoAdClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/RewardBasedVideoAdClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/RewardedAdClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/RewardedAdClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/Utils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/Android/Utils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/GoogleMobileAdsClientFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/GoogleMobileAdsClientFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/AdLoaderClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/AdLoaderClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/BannerClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/BannerClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/CustomNativeTemplateClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/CustomNativeTemplateClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/Externs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/Externs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/InitializationStatusClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/InitializationStatusClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/InterstitialClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/InterstitialClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/MobileAdsClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/MobileAdsClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/MonoPInvokeCallbackAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/MonoPInvokeCallbackAttribute.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/RewardBasedVideoAdClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/RewardBasedVideoAdClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/RewardedAdClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/RewardedAdClient.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/Utils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Platforms/iOS/Utils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.135.0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.135.0.dll.mdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.135.0.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.135.0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.135.0.dll.mdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.135.0.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll.mdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.135.0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.135.0.dll.mdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.135.0.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.135.0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayServicesResolver/Editor/play-services-resolver_v1.2.135.0.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/project.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/project.properties.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.annotation.annotation-1.0.0.jar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-common-2.0.0.jar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.arch.core.core-runtime-2.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.core.core-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.drawerlayout.drawerlayout-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.fragment.fragment-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.interpolator.interpolator-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.0.0.jar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.localbroadcastmanager.localbroadcastmanager-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.print.print-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.print.print-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-18.3.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-18.3.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-18.3.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-18.3.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-18.3.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-ads-lite-18.3.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-basement-17.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-gass-18.3.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-gass-18.3.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-17.1.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-17.1.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.1.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.1.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.0.0.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.android.gms.play-services-tasks-17.0.0.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/googlemobileads-unity.aar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Android/googlemobileads-unity.aar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUAdLoader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUAdLoader.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUAdLoader.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUAdLoader.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUAdNetworkExtras.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUAdNetworkExtras.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUBanner.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUBanner.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUBanner.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUBanner.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUInterface.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUInterface.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUInterstitial.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUInterstitial.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUInterstitial.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUInterstitial.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUNativeCustomTemplateAd.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUNativeCustomTemplateAd.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUNativeCustomTemplateAd.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUNativeCustomTemplateAd.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUObjectCache.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUObjectCache.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUObjectCache.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUObjectCache.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUPluginUtil.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUPluginUtil.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUPluginUtil.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUPluginUtil.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURequest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURequest.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURequest.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURequest.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardBasedVideoAd.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardBasedVideoAd.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardBasedVideoAd.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardBasedVideoAd.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardedAd.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardedAd.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardedAd.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADURewardedAd.m.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUTypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/iOS/GADUTypes.h.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PipeHead.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PipeHead.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/PipeHead.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/PipeHead.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/O-2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/O-2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/filler 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/filler 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/filler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/filler.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pipe.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ring.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ring.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ring.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ring.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RingCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RingCollider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bucketFillSliderAnimation.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bucketFillSliderAnimation.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -334,14 +45,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PipeCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Filler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RingCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdSize.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
       </list>
     </option>
   </component>
@@ -422,7 +133,8 @@
       <workItem from="1576436888008" duration="2053000" />
       <workItem from="1576920782944" duration="2920000" />
       <workItem from="1578337897699" duration="285000" />
-      <workItem from="1583314607618" duration="11070000" />
+      <workItem from="1583314607618" duration="11679000" />
+      <workItem from="1586568272839" duration="903000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>

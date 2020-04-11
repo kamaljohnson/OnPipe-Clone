@@ -9,6 +9,8 @@ using Random = UnityEngine.Random;
 public class Creator : MonoBehaviour
 {
     private float _pipeSpeed;
+
+    public Game game;
     
     public GameObject generalPipe;
     public List<GameObject> obstreclePipe;
@@ -59,6 +61,21 @@ public class Creator : MonoBehaviour
 
     void Update()
     {
+
+        switch (Game.gameState)
+        {
+            case GameStatus.Playing:
+                break;
+            case GameStatus.AtMenu:
+                break;
+            case GameStatus.GameOver:
+                DestroyAllObstrecles();
+                break;
+            case GameStatus.Loading:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
         
         if (CheckPipeCreationSensor())
         {
@@ -190,6 +207,11 @@ public class Creator : MonoBehaviour
             var tempPipe = Instantiate(fillerFrame, fillerCreationLocation.position, Quaternion.identity, _pipeHolder);
             tempPipe.transform.GetChild(0).localScale = new Vector3( hit.transform.parent.localScale.z + 0.1f, tempPipe.transform.localScale.y,  hit.transform.parent.localScale.z + 0.1f);
         }
+    }
+
+    public void DestroyAllObstrecles()
+    {
+        Destroy (GameObject.FindWithTag("Obstrecle"));
     }
     
 }
