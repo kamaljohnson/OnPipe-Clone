@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +128,7 @@
       <workItem from="1576920782944" duration="2920000" />
       <workItem from="1578337897699" duration="285000" />
       <workItem from="1583314607618" duration="11679000" />
-      <workItem from="1586568272839" duration="4556000" />
+      <workItem from="1586568272839" duration="4991000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>
