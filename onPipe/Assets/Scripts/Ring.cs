@@ -33,7 +33,12 @@ public class Ring : MonoBehaviour
 
     public void Update()
     {
-        if (Game.ringLocked) return;
+        if (Game.ringLocked)
+        {
+            Expand();
+
+            return;
+        }
         
         if (Input.GetKey(KeyCode.Space) || Input.touchCount >= 1)
         {
@@ -72,18 +77,18 @@ public class Ring : MonoBehaviour
         if (Physics.Raycast(ringContractionSensor.transform.position, ringContractionSensor.transform.forward, out var hit, 20))
         {
             _contractLimit = -hit.point.z + fitOffsetLimit;
-            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * Vector3.Distance(hit.point, ringContractionSensor.position), Color.red, 0);
+//            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * Vector3.Distance(hit.point, ringContractionSensor.position), Color.red, 0);
         }
         else
         {
             _contractLimit = 0;
-            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * 20, Color.blue, 0);
+//            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * 20, Color.blue, 0);
         }
         
         
         if (_preContractLimit < _contractLimit)
         {
-            Debug.Log("-> " + _preContractLimit + " : " + _contractLimit);
+//            Debug.Log("-> " + _preContractLimit + " : " + _contractLimit);
             game.GameOver();
         }
         
@@ -92,12 +97,15 @@ public class Ring : MonoBehaviour
         return true;
     }
 
-    public void Activate()
+    public void Activate(bool flag)
     {
+        gameObject.SetActive(true);
+        if(!flag)
+            return;
+        
         IsActive = true;
         Game.ringLocked = false;
         ring.transform.localScale = new Vector3(maxRingSize, maxRingSize, ring.transform.localScale.z);
-        gameObject.SetActive(true);
     }
     
     public void Destruct()

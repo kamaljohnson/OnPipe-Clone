@@ -48,7 +48,7 @@ public class Creator : MonoBehaviour
 
     void Start()
     {
-        _pipeSpeed = gameObject.GetComponent<Game>().pipeSpeed;
+        _pipeSpeed = Game.pipeSpeed;
         _pipeHolder = gameObject.GetComponent<Game>().pipeHolder;
         _newObstrecleCreated = true;
         _currentGeneralPipeIndex = 0;
@@ -67,10 +67,14 @@ public class Creator : MonoBehaviour
             case GameStatus.Playing:
                 break;
             case GameStatus.AtMenu:
+                Game.pipeSpeed = 3f;
                 break;
             case GameStatus.GameOver:
-                DestroyAllObstrecles();
-                break;
+                Game.pipeSpeed -= Game.pipeSpeed * Time.deltaTime * 2f;
+                if (Game.pipeSpeed < 1f)
+                    Game.pipeSpeed = 0f;
+                ChangeAllObstrecleType2ToType1();
+                return;
             case GameStatus.Loading:
                 break;
             default:
@@ -128,10 +132,10 @@ public class Creator : MonoBehaviour
     public bool CheckPipeCreationSensor()
     {
         RaycastHit hit;
-        Debug.DrawRay(pipeCreationSensor.position, pipeCreationSensor.forward * 10, Color.red);
+//        Debug.DrawRay(pipeCreationSensor.position, pipeCreationSensor.forward * 10, Color.red);
         if (!Physics.Raycast(pipeCreationSensor.position, pipeCreationSensor.forward, out hit, 10))
         {
-            Debug.DrawRay(pipeCreationSensor.position, pipeCreationSensor.forward * 10, Color.green);
+//            Debug.DrawRay(pipeCreationSensor.position, pipeCreationSensor.forward * 10, Color.green);
             return true;
         }
 
@@ -189,7 +193,7 @@ public class Creator : MonoBehaviour
         
         var tempPipe = Instantiate(obstreclePipe[rand], obstrecleCreationLocation.position, Quaternion.identity, _pipeHolder);
         
-        Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
+//        Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
         Physics.Raycast(obstrecleCreationSensor.position, obstrecleCreationSensor.forward, out var hit, 10);
         if (rand == 0)
         {
@@ -209,9 +213,9 @@ public class Creator : MonoBehaviour
         }
     }
 
-    public void DestroyAllObstrecles()
+    public void ChangeAllObstrecleType2ToType1()
     {
-        Destroy (GameObject.FindWithTag("Obstrecle"));
+        
     }
     
 }

@@ -33,9 +33,7 @@ public class GoogleAds : MonoBehaviour
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(appId);
 
-        this.CreateAndLoadRewardedAd();
         RequestBanner();
-/*        RequestInterstitial();*/
     }
 
     public void Update()
@@ -63,9 +61,9 @@ public class GoogleAds : MonoBehaviour
     {
         // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3691767518554104/1067331942";
+        string adUnitId = "ca-app-pub-3940256099942544~3347511713";
 #elif UNITY_IPHONE
-        string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+        string adUnitId = "ca-app-pub-3940256099942544~1458002511";
 #else
         string adUnitId = "unexpected_platform";
 #endif

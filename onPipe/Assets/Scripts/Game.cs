@@ -15,7 +15,7 @@ public enum GameStatus
 
 public class Game : MonoBehaviour
 {
-    public float pipeSpeed;
+    public static float pipeSpeed = 3f;
     
     public Transform pipeHolder;
     
@@ -67,8 +67,11 @@ public class Game : MonoBehaviour
                 currentLevelText.text = currentLevel.ToString();
                 PlayerPrefs.SetInt("CurrentLevel", currentLevel);
             }
+        } else if (gameState == GameStatus.AtMenu)
+        {
+            currentLevelProgressSlider.value = 0;
         }
-        
+
         pipeHolder.transform.localPosition += new Vector3(0, -Time.deltaTime * pipeSpeed, 0);
         if (gameState == GameStatus.Loading)
         {
@@ -109,7 +112,7 @@ public class Game : MonoBehaviour
         tapToStart.SetActive(true);
         tapToRestart.SetActive(false);
         Time.timeScale = 1;
-        ring.Activate();
+        ring.Activate(false);
     }
 
     public void StartGame()
@@ -117,7 +120,7 @@ public class Game : MonoBehaviour
         tapToStart.SetActive(false);
         tapToRestart.SetActive(false);
         gameState = GameStatus.Playing;
-        ring.Activate();
+        ring.Activate(true);
     }
 
     public void GameOver()
