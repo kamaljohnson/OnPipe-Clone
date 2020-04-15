@@ -89,6 +89,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Creator.cs" t="Include" />
+          <e p="Destructible.cs" t="Include" />
           <e p="Game.cs" t="Include" />
           <e p="GoogleAds.cs" t="Include" />
           <e p="ItemFiller.cs" t="Include" />

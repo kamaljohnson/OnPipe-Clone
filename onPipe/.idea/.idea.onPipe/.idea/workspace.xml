@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="" />
+    <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/O-1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/O-1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/O-2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/O-2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/filler 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/filler 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pipe.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pipe.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/GoogleMobileAds/Common/DummyClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Destructible.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scenes/01-  Single Line TextMesh Pro.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemHolder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,10 +55,12 @@
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Assets/GoogleMobileAds/Api/AdSize.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Distroyable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Destructible.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" />
       </list>
     </option>
   </component>
@@ -128,7 +142,8 @@
       <workItem from="1576920782944" duration="2920000" />
       <workItem from="1578337897699" duration="285000" />
       <workItem from="1583314607618" duration="11679000" />
-      <workItem from="1586568272839" duration="4991000" />
+      <workItem from="1586568272839" duration="5034000" />
+      <workItem from="1586938568832" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>

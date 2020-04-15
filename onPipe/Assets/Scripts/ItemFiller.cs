@@ -8,13 +8,11 @@ public class ItemFiller : MonoBehaviour
     public GameObject fillerItem;
     private List<GameObject> _fillerItems = new List<GameObject>();
     
-    [FormerlySerializedAs("FillerLifeSpan")] public int fillerLifeSpan;
     private bool _plucked = false;
     
     public void Start()
     {
         FillItem();
-        Destroy(gameObject, fillerLifeSpan);
     }
 
     public void Update()

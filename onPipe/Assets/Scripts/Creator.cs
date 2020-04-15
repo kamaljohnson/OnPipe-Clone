@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using UnityEditor;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
 public class Creator : MonoBehaviour
@@ -180,7 +177,6 @@ public class Creator : MonoBehaviour
                 pipeSizes[Random.Range(0, pipeSizes.Count)],
                 pipeWidths[rand]
                 );
-        Destroy(tempPipe, 10);
     }
 
     public void CreateObstrecle()
@@ -199,7 +195,6 @@ public class Creator : MonoBehaviour
         {
             tempPipe.transform.localScale = new Vector3(hit.transform.parent.localScale.z + .5f, tempPipe.transform.localScale.y, hit.transform.parent.localScale.z + .5f);    
         }
-        Destroy(tempPipe, 8);
         _newObstrecleCreated = true;
     }
 
