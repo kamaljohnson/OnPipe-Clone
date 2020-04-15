@@ -1,7 +1,5 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Analytics;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -26,6 +24,12 @@ public class Game : MonoBehaviour
     public GameObject tapToStart;
     public GameObject tapToRestart;
     public Slider currentLevelProgressSlider;
+
+    public GameObject gameOverUi;
+    public TMP_Text gameOverCurrentLevelText;
+    public TMP_Text gameOverCompletedPercentText;
+    public TMP_Text gameOverScoreText;
+    public TMP_Text gameOverBestScoreText;
 
     public static GameStatus gameState;
 
@@ -108,6 +112,7 @@ public class Game : MonoBehaviour
 
     public void ResetGame()
     {
+        gameOverUi.SetActive(false);
         gameState = GameStatus.AtMenu;
         tapToStart.SetActive(true);
         tapToRestart.SetActive(false);
@@ -117,6 +122,7 @@ public class Game : MonoBehaviour
 
     public void StartGame()
     {
+        gameOverUi.SetActive(false);
         tapToStart.SetActive(false);
         tapToRestart.SetActive(false);
         gameState = GameStatus.Playing;
@@ -125,13 +131,24 @@ public class Game : MonoBehaviour
 
     public void GameOver()
     {
+        SetGameOverUi();
         bucketFill = 0;
         tapToRestart.SetActive(true);
         gameState = GameStatus.GameOver;
         Time.timeScale = 0.3f;
         ring.Destruct();
+        
     }
 
+    public void SetGameOverUi()
+    {
+        gameOverUi.SetActive(true);
+        gameOverCurrentLevelText.text = "LEVEL " + currentLevel;
+        gameOverCompletedPercentText.text = "COMPLETED " + int.Parse(bucketFill.ToString()) + "%";
+        gameOverScoreText.text = "0";
+        gameOverBestScoreText.text = "BEST 0";
+    }
+    
     public void HandleLoadScreen()
     {
         gameState = GameStatus.Loading;
