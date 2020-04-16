@@ -96,6 +96,11 @@ public class Game : MonoBehaviour
         {
             CheckStateChange();
         }
+
+        if (gameState == GameStatus.GameWonUi)
+        {
+            GameWonUi();
+        }
     }
 
     public void GameWon()
@@ -107,6 +112,7 @@ public class Game : MonoBehaviour
 
     public void GameWonUi()
     {
+        Debug.Log("GameWonUi");
         currentLevel++;
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         gameState = GameStatus.GameWonUi;
