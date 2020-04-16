@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +136,7 @@
       <workItem from="1583314607618" duration="11679000" />
       <workItem from="1586568272839" duration="5034000" />
       <workItem from="1586938568832" duration="3812000" />
+      <workItem from="1587019476118" duration="1846000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>

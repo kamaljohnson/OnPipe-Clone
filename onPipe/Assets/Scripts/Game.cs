@@ -42,6 +42,9 @@ public class Game : MonoBehaviour
     private bool _pressed;
 
     public Ring ring;
+
+    public static int currentScore;
+    public static int bestScore;
     
     public void Start()
     {
@@ -49,10 +52,17 @@ public class Game : MonoBehaviour
         if (!PlayerPrefs.HasKey("CurrentLevel"))
         {
             currentLevel = 1;
+            currentScore = 0;
+            bestScore = 0;
+            PlayerPrefs.SetInt("CurrentScore", currentScore);
+            PlayerPrefs.SetInt("BestScore", bestScore);
+            
         }
         else
         {
             currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            currentScore = PlayerPrefs.GetInt("CurrentScore");
+            bestScore = PlayerPrefs.GetInt("BestScore");
         }
         
         currentLevelText.text = currentLevel.ToString();
@@ -122,6 +132,7 @@ public class Game : MonoBehaviour
 
     public void StartGame()
     {
+        currentScore = PlayerPrefs.GetInt("CurrentScore");
         gameOverUi.SetActive(false);
         tapToStart.SetActive(false);
         tapToRestart.SetActive(false);
@@ -131,6 +142,15 @@ public class Game : MonoBehaviour
 
     public void GameOver()
     {
+        currentScore += bucketFill;
+
+        if (currentScore > bestScore)
+        {
+            bestScore = currentScore;
+            PlayerPrefs.SetInt("BestScore", bestScore);
+            PlayerPrefs.SetInt("CurrentScore", 0);
+        }
+        
         SetGameOverUi();
         bucketFill = 0;
         tapToRestart.SetActive(true);
@@ -145,8 +165,8 @@ public class Game : MonoBehaviour
         gameOverUi.SetActive(true);
         gameOverCurrentLevelText.text = "LEVEL " + currentLevel;
         gameOverCompletedPercentText.text = "COMPLETED " + int.Parse(bucketFill.ToString()) + "%";
-        gameOverScoreText.text = "0";
-        gameOverBestScoreText.text = "BEST 0";
+        gameOverScoreText.text = currentScore.ToString();
+        gameOverBestScoreText.text = "BEST " + bestScore;
     }
     
     public void HandleLoadScreen()
