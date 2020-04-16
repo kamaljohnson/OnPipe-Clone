@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -8,7 +9,9 @@ public enum GameStatus
     Playing,
     AtMenu,
     GameOver,
-    Loading
+    Loading,
+    GameWon,
+    GameWonUi
 }
 
 public class Game : MonoBehaviour
@@ -73,13 +76,10 @@ public class Game : MonoBehaviour
     {
         if (gameState == GameStatus.Playing)
         {
-            currentLevelProgressSlider.value = (float) bucketFill / 100;
-            if (bucketFill == 100)
+            currentLevelProgressSlider.value = (float) bucketFill / (50 + 5 * currentLevel);
+            if (bucketFill >= 50 + 5 * currentLevel)
             {
-                bucketFill = 0;
-                currentLevel++;
-                currentLevelText.text = currentLevel.ToString();
-                PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+                GameWon();
             }
         } else if (gameState == GameStatus.AtMenu)
         {
@@ -96,6 +96,21 @@ public class Game : MonoBehaviour
         {
             CheckStateChange();
         }
+    }
+
+    public void GameWon()
+    {
+        gameState = GameStatus.GameWon;
+        currentLevelText.text = currentLevel.ToString();
+        PlayerPrefs.SetInt("CurrentScore", currentScore);
+    }
+
+    public void GameWonUi()
+    {
+        currentLevel++;
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        gameState = GameStatus.GameWonUi;
+        bucketFill = 0;
     }
     
     public void CheckStateChange()
@@ -122,6 +137,7 @@ public class Game : MonoBehaviour
 
     public void ResetGame()
     {
+        Creator.gameEndShown = false;
         gameOverUi.SetActive(false);
         gameState = GameStatus.AtMenu;
         tapToStart.SetActive(true);

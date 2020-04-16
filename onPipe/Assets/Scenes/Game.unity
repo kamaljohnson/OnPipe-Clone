@@ -859,7 +859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &799913606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1275,13 +1275,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a5672e40d7d0ed4b92fd01b76fa96e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
   generalPipe: {fileID: 924162778785830053, guid: fa3c0196dc275104d8fbd37e57d3dcb5,
     type: 3}
   obstreclePipe:
   - {fileID: 6741710610501395480, guid: 3a38cd2c003f46a44bfd273eb3507a93, type: 3}
   - {fileID: 7406196052639855772, guid: 2864a97b0feb08441a8b99dc926962da, type: 3}
   fillerFrame: {fileID: 4572868771373842671, guid: 1fb909fd5d0fe9440b8a5bce4971b764,
+    type: 3}
+  gameEndRing: {fileID: 7724336520263191875, guid: 3d63a1a7298d686459f34f1a6e8bcb75,
     type: 3}
   pipeCreationSensor: {fileID: 731242669}
   fillerCreatioinSensor: {fileID: 1716083715}
@@ -2581,7 +2582,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000015258789}
   m_SizeDelta: {x: 10, y: -0.12500381}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -17,7 +17,7 @@ public class ItemFiller : MonoBehaviour
 
     public void Update()
     {
-        if(Game.gameState != GameStatus.Playing)
+        if(Game.gameState != GameStatus.Playing && Game.gameState != GameStatus.GameWon)
             return;
         
         if (!_plucked)

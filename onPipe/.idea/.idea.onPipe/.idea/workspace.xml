@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/EndGameMaterial.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/EndGameMaterial.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/GameEnd.blend" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/GameEnd.blend.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/GameEnd.blend1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/GameEnd.blend1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/GameEnd.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/GameEnd.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Creator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +60,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ring.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Distroyable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Destructible.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemFiller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
       </list>
     </option>
@@ -136,7 +147,7 @@
       <workItem from="1583314607618" duration="11679000" />
       <workItem from="1586568272839" duration="5034000" />
       <workItem from="1586938568832" duration="3812000" />
-      <workItem from="1587019476118" duration="1846000" />
+      <workItem from="1587019476118" duration="5491000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>

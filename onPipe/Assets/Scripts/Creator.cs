@@ -7,12 +7,11 @@ public class Creator : MonoBehaviour
 {
     private float _pipeSpeed;
 
-    public Game game;
-    
     public GameObject generalPipe;
     public List<GameObject> obstreclePipe;
     public GameObject fillerFrame;
-
+    public GameObject gameEndRing;
+    
     private Transform _pipeHolder;
     public Transform pipeCreationSensor;
 
@@ -42,6 +41,8 @@ public class Creator : MonoBehaviour
     public List<float> pipeWidths = new List<float>();
 
     public GameObject ring;
+
+    public static bool gameEndShown = false; 
 
     void Start()
     {
@@ -73,6 +74,10 @@ public class Creator : MonoBehaviour
                 ChangeAllObstrecleType2ToType1();
                 return;
             case GameStatus.Loading:
+                break;
+            case GameStatus.GameWon:
+                break;
+            case GameStatus.GameWonUi:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -181,6 +186,13 @@ public class Creator : MonoBehaviour
 
     public void CreateObstrecle()
     {
+        if (Game.gameState == GameStatus.GameWon && !gameEndShown)
+        {
+            gameEndShown = true;
+            var gameEndRing = Instantiate(this.gameEndRing, obstrecleCreationLocation.position, Quaternion.identity, _pipeHolder);
+            return;
+        }
+        
         var rand = Random.RandomRange(0, 2);
         if (Game.gameState != GameStatus.Playing)
         {
@@ -189,7 +201,6 @@ public class Creator : MonoBehaviour
         
         var tempPipe = Instantiate(obstreclePipe[rand], obstrecleCreationLocation.position, Quaternion.identity, _pipeHolder);
         
-//        Debug.DrawRay(obstrecleCreationSensor.position, obstrecleCreationSensor.forward * 10, Color.green);
         Physics.Raycast(obstrecleCreationSensor.position, obstrecleCreationSensor.forward, out var hit, 10);
         if (rand == 0)
         {
