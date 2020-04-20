@@ -92,7 +92,6 @@
           <e p="Destructible.cs" t="Include" />
           <e p="Game.cs" t="Include" />
           <e p="GameEndTrigger.cs" t="Include" />
-          <e p="GoogleAds.cs" t="Include" />
           <e p="ItemFiller.cs" t="Include" />
           <e p="ItemHolder.cs" t="Include" />
           <e p="Ring.cs" t="Include" />

@@ -48,7 +48,7 @@ public class Game : MonoBehaviour
 
     public static int currentScore;
     public static int bestScore;
-    
+
     public void Start()
     {
         ringLocked = true;
