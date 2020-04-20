@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleMobileAds/Resources/GoogleMobileAdsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +50,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Creator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameEndTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +138,7 @@
       <workItem from="1587019476118" duration="6190000" />
       <workItem from="1587075032897" duration="746000" />
       <workItem from="1587359442441" duration="3990000" />
-      <workItem from="1587363968055" duration="1368000" />
+      <workItem from="1587363968055" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>
