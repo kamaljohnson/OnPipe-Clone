@@ -16,6 +16,7 @@
           <e p="Ring.cs" t="Include" />
           <e p="RingCollider.cs" t="Include" />
           <e p="UnityBannerAds.cs" t="Include" />
+          <e p="UnityRewardedVideoAds.cs" t="Include" />
           <e p="UnityVideoAds.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">

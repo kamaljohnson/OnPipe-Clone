@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="594b8c79-7b0e-4232-9149-2e45c60be939" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UnityVideoAds.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.onPipe/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityBannerAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityBannerAds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityVideoAds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityVideoAds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Destructible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnityRewardedVideoAds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scenes/01-  Single Line TextMesh Pro.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameEndTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemHolder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,11 +58,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameEndTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/GoogleMobileAdsPlugin/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GoogleAds.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityAds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BannerAdScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UnityBannerAds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityRewardedVideoAds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UnityVideoAds.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UnityBannerAds.cs" />
       </list>
     </option>
   </component>
@@ -148,6 +154,7 @@
       <workItem from="1587614532138" duration="3141000" />
       <workItem from="1587700503396" duration="21000" />
       <workItem from="1587701134296" duration="1240000" />
+      <workItem from="1587744466427" duration="3448000" />
     </task>
     <task id="LOCAL-00001" summary="filler creation">
       <created>1565726299135</created>

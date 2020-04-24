@@ -49,6 +49,10 @@ public class Game : MonoBehaviour
     public static int currentScore;
     public static int bestScore;
 
+    public UnityBannerAds bannerAds;
+    public UnityVideoAds videoAds;
+    public UnityRewardedVideoAds rewardedVideoAds;
+
     public void Start()
     {
         ringLocked = true;
@@ -112,6 +116,7 @@ public class Game : MonoBehaviour
 
     public void GameWonUi()
     {
+        videoAds.ShowAd();
         Debug.Log("GameWonUi");
         currentLevel++;
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
@@ -164,6 +169,7 @@ public class Game : MonoBehaviour
 
     public void GameOver()
     {
+        videoAds.ShowAd();
         currentScore += bucketFill;
 
         if (currentScore > bestScore)

@@ -1,22 +1,19 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.Monetization;
 
 public class UnityBannerAds : MonoBehaviour {
 
     public string bannerPlacement = "bottomBanner";
     public bool testMode = true;
 
-#if UNITY_IOS
-    public const string gameID = "1234567";
-#elif UNITY_ANDROID
-    public const string gameID = "3568970";
-#elif UNITY_EDITOR
-    public const string gameID = "1111111";
-#endif
+    public string gameId = "3568970";
 
     void Start () {
-        Advertisement.Initialize (gameID, testMode);
+        Advertisement.Initialize(gameId, testMode);
+        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+        Advertisement.Banner.Load(bannerPlacement);
         StartCoroutine (ShowBannerWhenReady ());
     }
 
@@ -24,7 +21,6 @@ public class UnityBannerAds : MonoBehaviour {
         while (!Advertisement.IsReady (bannerPlacement)) {
             yield return new WaitForSeconds (0.5f);
         }
-        Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
         Advertisement.Banner.Show (bannerPlacement);
     }
 }
