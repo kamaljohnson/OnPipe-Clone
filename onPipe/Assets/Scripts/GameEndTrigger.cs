@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameEndTrigger : MonoBehaviour
 {
@@ -10,7 +7,7 @@ public class GameEndTrigger : MonoBehaviour
 
         if (other.CompareTag("Ring"))
         {
-            Game.gameState = GameStatus.GameWonUi;
+            FindObjectOfType<Game>().GameWon();
         }
         
     }

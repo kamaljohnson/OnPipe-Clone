@@ -1,7 +1,5 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public enum GameStatus
@@ -10,8 +8,8 @@ public enum GameStatus
     AtMenu,
     GameOver,
     Loading,
-    GameWon,
-    GameWonUi
+    BucketFull,
+    GameWon
 }
 
 public class Game : MonoBehaviour
@@ -52,34 +50,36 @@ public class Game : MonoBehaviour
 
     public Ring ring;
 
-    public static int currentScore;
-    public static int bestScore;
+    private static int _currentScore;
+    private static int _bestScore;
 
-    public UnityBannerAds bannerAds;
     public UnityVideoAds videoAds;
     public UnityRewardedVideoAds rewardedVideoAds;
 
+    private bool _firstStart;
+    
     public void Start()
     {
         ringLocked = true;
         if (!PlayerPrefs.HasKey("CurrentLevel"))
         {
             currentLevel = 1;
-            currentScore = 0;
-            bestScore = 0;
-            PlayerPrefs.SetInt("CurrentScore", currentScore);
-            PlayerPrefs.SetInt("BestScore", bestScore);
+            _currentScore = 0;
+            _bestScore = 0;
+            PlayerPrefs.SetInt("CurrentScore", _currentScore);
+            PlayerPrefs.SetInt("BestScore", _bestScore);
             
         }
         else
         {
             currentLevel = PlayerPrefs.GetInt("CurrentLevel");
-            currentScore = PlayerPrefs.GetInt("CurrentScore");
-            bestScore = PlayerPrefs.GetInt("BestScore");
+            _currentScore = PlayerPrefs.GetInt("CurrentScore");
+            _bestScore = PlayerPrefs.GetInt("BestScore");
         }
 
         currentLevelText.text = currentLevel.ToString();
         gameState = GameStatus.Loading;
+        _firstStart = true;
     }
 
     void Update()
@@ -90,7 +90,7 @@ public class Game : MonoBehaviour
             currentLevelProgressSlider.value = bucketFill * 3f / (100f + multiplier * 10f) ;
             if (currentLevelProgressSlider.value >= 1f)
             {
-                GameWon();
+                BucketFull();
             }
         } else if (gameState == GameStatus.AtMenu)
         {
@@ -107,32 +107,9 @@ public class Game : MonoBehaviour
         {
             CheckStateChange();
         }
-
-        if (gameState == GameStatus.GameWonUi)
-        {
-            GameWonUi();
-        }
     }
 
-    public void GameWon()
-    {
-        currentScore += bucketFill;
-        currentLevel++;
-        gameState = GameStatus.GameWon;
-        PlayerPrefs.SetInt("CurrentScore", currentScore);
-    }
-
-    public void GameWonUi()
-    {
-        SetGameWonUi();
-        Debug.Log("GameWonUi");
-        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
-        currentLevelText.text = currentLevel.ToString();
-        gameState = GameStatus.GameWonUi;
-        bucketFill = 0;
-    }
-    
-    public void CheckStateChange()
+    private void CheckStateChange()
     {
         if (Input.GetKeyDown(KeyCode.Space) || (Input.touchCount >= 1 && !_pressed))
         {
@@ -144,7 +121,7 @@ public class Game : MonoBehaviour
                 case GameStatus.GameOver:
                     ResetGame();
                     break;
-                case GameStatus.GameWonUi:
+                case GameStatus.GameWon:
                     ResetGame();
                     break;
             }
@@ -157,24 +134,33 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void ResetGame()
+    private void ResetGame()
     {
         ring.ResetLocation();
-        videoAds.ShowAd();
         Creator.gameEndShown = false;
         gameOverUi.SetActive(false);
         gameWonUi.SetActive(false);
-        gameState = GameStatus.AtMenu;
         tapToStart.SetActive(true);
         tapToRestart.SetActive(false);
         tapToContinue.SetActive(false);
         Time.timeScale = 1;
         ring.Activate(false);
+        AtMenu();
     }
 
-    public void StartGame()
+    private void AtMenu()
     {
-        currentScore = PlayerPrefs.GetInt("CurrentScore");
+        if (!_firstStart)
+        {
+            videoAds.ShowAd();
+        }
+        _firstStart = false;
+        gameState = GameStatus.AtMenu;
+    }
+
+    private void StartGame()
+    {
+        _currentScore = PlayerPrefs.GetInt("CurrentScore");
         gameOverUi.SetActive(false);
         tapToStart.SetActive(false);
         tapToRestart.SetActive(false);
@@ -183,46 +169,67 @@ public class Game : MonoBehaviour
         ring.Activate(true);
     }
 
+    private void BucketFull()
+    {
+        gameState = GameStatus.BucketFull;
+    }
+
+    public void GameWon()
+    {
+        currentLevel++;
+        _currentScore += bucketFill;
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        PlayerPrefs.SetInt("CurrentScore", _currentScore);
+        if (_currentScore > _bestScore)
+        {
+            _bestScore = _currentScore;
+            PlayerPrefs.SetInt("BestScore", _bestScore);
+        }
+        SetGameWonUi();
+        currentLevelText.text = currentLevel.ToString();
+        bucketFill = 0;
+        gameState = GameStatus.GameWon;
+        ring.Deactivate();
+    }
+    
     public void GameOver()
     {
-        videoAds.ShowAd();
-        currentScore += bucketFill;
+        _currentScore += bucketFill;
 
-        if (currentScore > bestScore)
+        if (_currentScore > _bestScore)
         {
-            bestScore = currentScore;
-            PlayerPrefs.SetInt("BestScore", bestScore);
+            _bestScore = _currentScore;
+            PlayerPrefs.SetInt("BestScore", _bestScore);
             PlayerPrefs.SetInt("CurrentScore", 0);
         }
         
         SetGameOverUi();
         bucketFill = 0;
-        tapToRestart.SetActive(true);
         gameState = GameStatus.GameOver;
         Time.timeScale = 0.3f;
         ring.Destruct();
-        
     }
 
-    public void SetGameWonUi()
+    private void SetGameWonUi()
     {
         gameWonUi.SetActive(true);
         gameWonCurrentLevelText.text = "LEVEL " + currentLevel;
-        gameWonScoreText.text = currentScore.ToString();
-        gameWonBestScoreText.text = "BEST " + bestScore;
+        gameWonScoreText.text = _currentScore.ToString();
+        gameWonBestScoreText.text = "BEST " + _bestScore;
         tapToContinue.SetActive(true);
     }
-    
-    public void SetGameOverUi()
+
+    private void SetGameOverUi()
     {
         gameOverUi.SetActive(true);
         gameOverCurrentLevelText.text = "LEVEL " + currentLevel;
         gameOverCompletedPercentText.text = "COMPLETED " + int.Parse(bucketFill.ToString()) + "%";
-        gameOverScoreText.text = currentScore.ToString();
-        gameOverBestScoreText.text = "BEST " + bestScore;
+        gameOverScoreText.text = _currentScore.ToString();
+        gameOverBestScoreText.text = "BEST " + _bestScore;
+        tapToRestart.SetActive(true);
     }
-    
-    public void HandleLoadScreen()
+
+    private void HandleLoadScreen()
     {
         gameState = GameStatus.Loading;
         _loadScreenCounter+=Time.deltaTime;

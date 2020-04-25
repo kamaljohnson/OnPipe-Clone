@@ -1901,7 +1901,6 @@ MonoBehaviour:
   loadScreen: {fileID: 858284509}
   loadScreenDelay: 7
   ring: {fileID: 8296172668645803746}
-  bannerAds: {fileID: 1114040581}
   videoAds: {fileID: 40919615}
   rewardedVideoAds: {fileID: 728199928}
 --- !u!1 &1398443866
@@ -3937,7 +3936,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5ff510dbc71276a4f99f7af3c08ed467, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0

@@ -75,9 +75,9 @@ public class Creator : MonoBehaviour
                 return;
             case GameStatus.Loading:
                 break;
-            case GameStatus.GameWon:
+            case GameStatus.BucketFull:
                 break;
-            case GameStatus.GameWonUi:
+            case GameStatus.GameWon:
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -105,7 +105,7 @@ public class Creator : MonoBehaviour
         
         if (_createFiller)
         {
-            if(Game.gameState == GameStatus.GameWonUi || Game.gameState == GameStatus.GameWon)
+            if(Game.gameState == GameStatus.GameWon || Game.gameState == GameStatus.BucketFull)
                 return;
             
             _fillerCreationCounter += Time.deltaTime;
@@ -178,7 +178,7 @@ public class Creator : MonoBehaviour
         }
 
         _currentGeneralPipeIndex = rand;
-        if (Game.gameState == GameStatus.GameWon || Game.gameState == GameStatus.GameWonUi)
+        if (Game.gameState == GameStatus.BucketFull || Game.gameState == GameStatus.GameWon)
             _currentGeneralPipeIndex = 0;
 
         var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, _pipeHolder);
@@ -191,14 +191,14 @@ public class Creator : MonoBehaviour
 
     public void CreateObstrecle()
     {
-        if (Game.gameState == GameStatus.GameWon && !gameEndShown)
+        if (Game.gameState == GameStatus.BucketFull && !gameEndShown)
         {
             gameEndShown = true;
             var gameEndRing = Instantiate(this.gameEndRing, obstrecleCreationLocation.position, Quaternion.identity, _pipeHolder);
             return;
         }
         
-        if (Game.gameState == GameStatus.GameWon || Game.gameState == GameStatus.GameWonUi)
+        if (Game.gameState == GameStatus.BucketFull || Game.gameState == GameStatus.GameWon)
             return;
 
         var rand = Random.RandomRange(0, 2);

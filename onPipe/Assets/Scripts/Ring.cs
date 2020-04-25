@@ -16,7 +16,6 @@ public class Ring : MonoBehaviour
     public Transform ringContractionSensor;
     public float fitOffsetLimit;
     
-    private bool _pressedScreen;
     private float _contractLimit;
     private float _preContractLimit = 10;
 
@@ -28,11 +27,6 @@ public class Ring : MonoBehaviour
 
     public Animator ringAnimator;
     
-    public void Start()
-    {
-        _pressedScreen = false;
-    }
-
     public void Update()
     {
         if (Game.ringLocked)
@@ -42,7 +36,7 @@ public class Ring : MonoBehaviour
             return;
         }
         
-        if (Input.GetKey(KeyCode.Space) || Input.touchCount >= 1)
+        if ((Input.GetKey(KeyCode.Space) || Input.touchCount >= 1) && !(Game.gameState == GameStatus.AtMenu || Game.gameState == GameStatus.GameWon))
         {
             Contract();
         }
@@ -51,7 +45,7 @@ public class Ring : MonoBehaviour
             Expand();
         }
 
-        if (Game.gameState == GameStatus.GameWon)
+        if (Game.gameState == GameStatus.BucketFull)
         {
             FinishingMove();
         }
@@ -84,18 +78,15 @@ public class Ring : MonoBehaviour
         if (Physics.Raycast(ringContractionSensor.transform.position, ringContractionSensor.transform.forward, out var hit, 20))
         {
             _contractLimit = -hit.point.z + fitOffsetLimit;
-//            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * Vector3.Distance(hit.point, ringContractionSensor.position), Color.red, 0);
         }
         else
         {
             _contractLimit = 0;
-//            Debug.DrawRay(ringContractionSensor.transform.position, ringContractionSensor.transform.forward * 20, Color.blue, 0);
         }
         
         
         if (_preContractLimit < _contractLimit)
         {
-//            Debug.Log("-> " + _preContractLimit + " : " + _contractLimit);
             game.GameOver();
         }
         
@@ -111,7 +102,7 @@ public class Ring : MonoBehaviour
 
     public void ResetLocation()
     {
-        gameObject.transform.localPosition = new Vector3(0, 0, 0);
+        gameObject.transform.position = new Vector3(0, 0, 0);
     }
     
     public void Activate(bool flag)
@@ -124,10 +115,15 @@ public class Ring : MonoBehaviour
         Game.ringLocked = false;
         ring.transform.localScale = new Vector3(maxRingSize, maxRingSize, ring.transform.localScale.z);
     }
+
+    public void Deactivate()
+    {
+        IsActive = false;
+    }
     
     public void Destruct()
     {
-        IsActive = false;
+        Deactivate();
         Game.ringLocked = true;
         gameObject.SetActive(false);
     }
