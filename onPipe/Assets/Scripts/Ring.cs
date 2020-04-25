@@ -25,6 +25,8 @@ public class Ring : MonoBehaviour
     public static bool IsActive;
 
     public Game game;
+
+    public Animator ringAnimator;
     
     public void Start()
     {
@@ -47,6 +49,11 @@ public class Ring : MonoBehaviour
         else
         {
             Expand();
+        }
+
+        if (Game.gameState == GameStatus.GameWon)
+        {
+            FinishingMove();
         }
     }
 
@@ -97,6 +104,11 @@ public class Ring : MonoBehaviour
         return true;
     }
 
+    public void FinishingMove()
+    {
+        ringAnimator.Play("FinishingMoveAnimation", 0, 0);
+    }
+    
     public void Activate(bool flag)
     {
         gameObject.SetActive(true);

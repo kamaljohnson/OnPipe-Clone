@@ -3035,6 +3035,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858b0a2a6383e324091c043f04e37114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8296172668645803747
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668645803745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ff510dbc71276a4f99f7af3c08ed467, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &8296172668645803749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253185664828513033, guid: a98453c1968b55d42bf42e3ae9f01645,
@@ -3093,6 +3112,11 @@ PrefabInstance:
       propertyPath: game
       value: 
       objectReference: {fileID: 1304159130}
+    - target: {fileID: 962925942646630680, guid: a98453c1968b55d42bf42e3ae9f01645,
+        type: 3}
+      propertyPath: ringAnimator
+      value: 
+      objectReference: {fileID: 8296172668645803747}
     - target: {fileID: 4253185664828513033, guid: a98453c1968b55d42bf42e3ae9f01645,
         type: 3}
       propertyPath: m_LocalPosition.x
