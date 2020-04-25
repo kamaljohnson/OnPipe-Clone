@@ -72,6 +72,9 @@ public class Game : MonoBehaviour
             bestScore = PlayerPrefs.GetInt("BestScore");
         }
         
+        //TODO remove this code
+        currentLevel = 1;
+        
         currentLevelText.text = currentLevel.ToString();
         gameState = GameStatus.Loading;
     }
@@ -80,7 +83,8 @@ public class Game : MonoBehaviour
     {
         if (gameState == GameStatus.Playing)
         {
-            currentLevelProgressSlider.value = (float) bucketFill / (50 + 5 * currentLevel);
+            float multiplier = Mathf.Min(60, currentLevel);
+            currentLevelProgressSlider.value = bucketFill * 3f / (100f + multiplier * 10f) ;
             if (bucketFill >= 50 + 5 * currentLevel)
             {
                 GameWon();
@@ -116,7 +120,6 @@ public class Game : MonoBehaviour
 
     public void GameWonUi()
     {
-        videoAds.ShowAd();
         Debug.Log("GameWonUi");
         currentLevel++;
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
@@ -148,6 +151,7 @@ public class Game : MonoBehaviour
 
     public void ResetGame()
     {
+        videoAds.ShowAd();
         Creator.gameEndShown = false;
         gameOverUi.SetActive(false);
         gameState = GameStatus.AtMenu;

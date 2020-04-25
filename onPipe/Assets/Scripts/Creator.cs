@@ -105,6 +105,9 @@ public class Creator : MonoBehaviour
         
         if (_createFiller)
         {
+            if(Game.gameState == GameStatus.GameWonUi || Game.gameState == GameStatus.GameWon)
+                return;
+            
             _fillerCreationCounter += Time.deltaTime;
             if (!_fillerCreationStarted)
             {
@@ -175,12 +178,14 @@ public class Creator : MonoBehaviour
         }
 
         _currentGeneralPipeIndex = rand;
-        
+        if (Game.gameState == GameStatus.GameWon || Game.gameState == GameStatus.GameWonUi)
+            _currentGeneralPipeIndex = 0;
+
         var tempPipe = Instantiate(generalPipe, createLocation.position, createLocation.rotation, _pipeHolder);
         tempPipe.transform.localScale += new Vector3(
-                pipeWidths[rand],
+                pipeWidths[_currentGeneralPipeIndex],
                 pipeSizes[Random.Range(0, pipeSizes.Count)],
-                pipeWidths[rand]
+                pipeWidths[_currentGeneralPipeIndex]
                 );
     }
 
@@ -193,6 +198,9 @@ public class Creator : MonoBehaviour
             return;
         }
         
+        if (Game.gameState == GameStatus.GameWon || Game.gameState == GameStatus.GameWonUi)
+            return;
+
         var rand = Random.RandomRange(0, 2);
         if (Game.gameState != GameStatus.Playing)
         {
