@@ -77,10 +77,7 @@ public class Game : MonoBehaviour
             currentScore = PlayerPrefs.GetInt("CurrentScore");
             bestScore = PlayerPrefs.GetInt("BestScore");
         }
-        
-        //TODO remove this code
-        currentLevel = 1;
-        
+
         currentLevelText.text = currentLevel.ToString();
         gameState = GameStatus.Loading;
     }
@@ -122,7 +119,6 @@ public class Game : MonoBehaviour
         currentScore += bucketFill;
         currentLevel++;
         gameState = GameStatus.GameWon;
-        currentLevelText.text = currentLevel.ToString();
         PlayerPrefs.SetInt("CurrentScore", currentScore);
     }
 
@@ -131,6 +127,7 @@ public class Game : MonoBehaviour
         SetGameWonUi();
         Debug.Log("GameWonUi");
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        currentLevelText.text = currentLevel.ToString();
         gameState = GameStatus.GameWonUi;
         bucketFill = 0;
     }

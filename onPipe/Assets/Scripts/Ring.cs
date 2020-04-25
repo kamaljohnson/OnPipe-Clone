@@ -106,7 +106,7 @@ public class Ring : MonoBehaviour
 
     public void FinishingMove()
     {
-        ringAnimator.Play("FinishingMoveAnimation", 0, 0);
+        ringAnimator.Play("FinishingMoveAnimation", -1, 0);
     }
 
     public void ResetLocation()
