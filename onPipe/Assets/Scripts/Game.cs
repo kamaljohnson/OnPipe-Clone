@@ -26,6 +26,7 @@ public class Game : MonoBehaviour
     public TMP_Text currentLevelText;
     public GameObject tapToStart;
     public GameObject tapToRestart;
+    public GameObject tapToContinue;
     public Slider currentLevelProgressSlider;
 
     public GameObject gameOverUi;
@@ -34,6 +35,11 @@ public class Game : MonoBehaviour
     public TMP_Text gameOverScoreText;
     public TMP_Text gameOverBestScoreText;
 
+    public GameObject gameWonUi;
+    public TMP_Text gameWonCurrentLevelText;
+    public TMP_Text gameWonScoreText;
+    public TMP_Text gameWonBestScoreText;
+    
     public static GameStatus gameState;
 
     public GameObject loadScreen;
@@ -85,7 +91,7 @@ public class Game : MonoBehaviour
         {
             float multiplier = Mathf.Min(60, currentLevel);
             currentLevelProgressSlider.value = bucketFill * 3f / (100f + multiplier * 10f) ;
-            if (bucketFill >= 50 + 5 * currentLevel)
+            if (currentLevelProgressSlider.value >= 1f)
             {
                 GameWon();
             }
@@ -113,6 +119,8 @@ public class Game : MonoBehaviour
 
     public void GameWon()
     {
+        currentScore += bucketFill;
+        currentLevel++;
         gameState = GameStatus.GameWon;
         currentLevelText.text = currentLevel.ToString();
         PlayerPrefs.SetInt("CurrentScore", currentScore);
@@ -120,8 +128,8 @@ public class Game : MonoBehaviour
 
     public void GameWonUi()
     {
+        SetGameWonUi();
         Debug.Log("GameWonUi");
-        currentLevel++;
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         gameState = GameStatus.GameWonUi;
         bucketFill = 0;
@@ -139,6 +147,9 @@ public class Game : MonoBehaviour
                 case GameStatus.GameOver:
                     ResetGame();
                     break;
+                case GameStatus.GameWonUi:
+                    ResetGame();
+                    break;
             }
             _pressed = true;
         }
@@ -151,12 +162,15 @@ public class Game : MonoBehaviour
 
     public void ResetGame()
     {
+        ring.ResetLocation();
         videoAds.ShowAd();
         Creator.gameEndShown = false;
         gameOverUi.SetActive(false);
+        gameWonUi.SetActive(false);
         gameState = GameStatus.AtMenu;
         tapToStart.SetActive(true);
         tapToRestart.SetActive(false);
+        tapToContinue.SetActive(false);
         Time.timeScale = 1;
         ring.Activate(false);
     }
@@ -167,6 +181,7 @@ public class Game : MonoBehaviour
         gameOverUi.SetActive(false);
         tapToStart.SetActive(false);
         tapToRestart.SetActive(false);
+        tapToContinue.SetActive(false);
         gameState = GameStatus.Playing;
         ring.Activate(true);
     }
@@ -192,6 +207,15 @@ public class Game : MonoBehaviour
         
     }
 
+    public void SetGameWonUi()
+    {
+        gameWonUi.SetActive(true);
+        gameWonCurrentLevelText.text = "LEVEL " + currentLevel;
+        gameWonScoreText.text = currentScore.ToString();
+        gameWonBestScoreText.text = "BEST " + bestScore;
+        tapToContinue.SetActive(true);
+    }
+    
     public void SetGameOverUi()
     {
         gameOverUi.SetActive(true);

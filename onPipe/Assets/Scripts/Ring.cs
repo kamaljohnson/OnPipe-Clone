@@ -108,6 +108,11 @@ public class Ring : MonoBehaviour
     {
         ringAnimator.Play("FinishingMoveAnimation", 0, 0);
     }
+
+    public void ResetLocation()
+    {
+        gameObject.transform.localPosition = new Vector3(0, 0, 0);
+    }
     
     public void Activate(bool flag)
     {
