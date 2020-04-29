@@ -136,7 +136,8 @@ public class Game : MonoBehaviour
 
     private void ResetGame()
     {
-        ring.ResetLocation();
+        ring.Activate(false);
+        ring.ResetRingLocation();
         Creator.gameEndShown = false;
         gameOverUi.SetActive(false);
         gameWonUi.SetActive(false);
@@ -144,7 +145,6 @@ public class Game : MonoBehaviour
         tapToRestart.SetActive(false);
         tapToContinue.SetActive(false);
         Time.timeScale = 1;
-        ring.Activate(false);
         AtMenu();
     }
 

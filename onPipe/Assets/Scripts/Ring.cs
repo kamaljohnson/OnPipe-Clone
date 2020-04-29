@@ -26,6 +26,8 @@ public class Ring : MonoBehaviour
     public Game game;
 
     public Animator ringAnimator;
+
+    public bool showedFinishingAnimation;
     
     public void Update()
     {
@@ -45,8 +47,9 @@ public class Ring : MonoBehaviour
             Expand();
         }
 
-        if (Game.gameState == GameStatus.BucketFull)
+        if (Game.gameState == GameStatus.GameWon && !showedFinishingAnimation)
         {
+            showedFinishingAnimation = true;
             FinishingMove();
         }
     }
@@ -100,13 +103,14 @@ public class Ring : MonoBehaviour
         ringAnimator.Play("FinishingMoveAnimation", -1, 0);
     }
 
-    public void ResetLocation()
+    public void ResetRingLocation()
     {
-        gameObject.transform.position = new Vector3(0, 0, 0);
+        ringAnimator.Play("GoBackToBase", -1, 0);
     }
     
     public void Activate(bool flag)
     {
+        showedFinishingAnimation = false;
         gameObject.SetActive(true);
         if(!flag)
             return;
